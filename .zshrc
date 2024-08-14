@@ -9,7 +9,7 @@ ZSH_THEME="agnoster"
 zstyle ':omz:update' mode auto      # update automatically without asking
 
 # Uncomment the following line if you want to change the command execution time
-HIST_STAMPS="yyyy/mm/dd"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$DOTFILES
@@ -43,3 +43,4 @@ case $TERM in (xterm*)
 bindkey "^[OH" beginning-of-line
 bindkey "^[OF" end-of-line
 esac
+source /Users/taking/.config/broot/launcher/bash/br

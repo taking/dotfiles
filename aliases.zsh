@@ -17,6 +17,12 @@ alias df='duf'
 alias curl='curlie'
 alias ps='procs'
 alias find='fd'
+alias history='fc -il 1'
+alias grep='rg'
+alias man='tldr'
+alias tree='broot'
+alias ping='gping'
+alias nnn='nnn -T dst'
 
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="omz reload"

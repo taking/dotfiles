@@ -32,6 +32,11 @@ brew "curlie"                         # Power of curl, ease of use of httpie
 brew "procs"                          # Modern replacement for ps written by Rust
 brew "speedtest-cli"                  # Command-line interface for https://speedtest.net bandwidth tests
 brew "helix"                          # Post-modern modal text editor
+brbe "ripgrep"                        # Search tool like grep and The Silver Searcher
+brew "tldr"                           # Simplified and community-driven man pages
+brew "broot"                          # New way to see and navigate directory trees
+brew "gping"                          # Ping, but with a graph
+brew "nnn"                            # Tiny, lightning fast, feature-packed file manager
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-autosuggestions"
