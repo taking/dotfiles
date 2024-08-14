@@ -38,4 +38,7 @@ Thumbs.db
 .idea/
 .vscode
 .vagrant/
-brewfile/taking.Brewfile.lock.json
+
+# Etc #
+#######
+*.lock.json

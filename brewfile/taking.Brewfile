@@ -37,6 +37,7 @@ brew "tldr"                           # Simplified and community-driven man page
 brew "broot"                          # New way to see and navigate directory trees
 brew "gping"                          # Ping, but with a graph
 brew "nnn"                            # Tiny, lightning fast, feature-packed file manager
+brew "balenaetcher"		      # Tool to flash OS images to SD cards & USB drives
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-autosuggestions"

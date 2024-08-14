@@ -19,6 +19,9 @@ fi
 rm -rf $HOME/.zshrc
 ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
+# Homebrew telemetry 끄기
+brew analytics off
+
 # Homebrew 레시피 업데이트
 brew update
 
