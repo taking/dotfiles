@@ -22,7 +22,7 @@
 
     ```zsh
     curl https://raw.githubusercontent.com/taking/dotfiles/HEAD/ssh.sh | sh -s "taking@duck.com"
-```
+    ```
 
 2. 저장소를 `$HOME/.dotfiles`로 복사:
 
@@ -38,7 +38,9 @@
 5. mackup을 통해 설정을 복구하세요. `mackup restore`
 7. 재부팅
 
-printf '\n\n🎉 뿌뿌! 맥 설정이 완료되었습니다!\n'
+<br />
+
+🎉 뿌뿌! 맥 설정이 완료되었습니다!
 
 ## Thanks To...
 Fork by [driesvints/dotilfes](https://github.com/driesvints/dotfiles)
