@@ -2,12 +2,12 @@
 
 echo "Setting up your Mac..."
 
-# Check for Oh My Zsh and install if we don't have it
+# Oh My Zsh 설치 확인
 if test ! $(which omz); then
   /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
 fi
 
-# Check for Homebrew and install if we don't have it
+# Homebrew 설치 확인
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -15,33 +15,21 @@ if test ! $(which brew); then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
+# 기존에 .zshrc 가 있다면 제거하고, .dotfiles/.zshrc 를 심볼링 링크로 연결
 rm -rf $HOME/.zshrc
 ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
-# Update Homebrew recipes
+# Homebrew 레시피 업데이트
 brew update
 
-# Install all our dependencies with bundle (See Brewfile)
+# homebrew Bundle로 일괄 설치 실행(cf. taking.Brewfile)
 brew tap homebrew/bundle
-brew bundle --file ./Brewfile
-
-# Set default MySQL root password and auth type
-mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
-
-# Create a projects directories
-mkdir $HOME/Code
-mkdir $HOME/Herd
-
-# Create Code subdirectories
-mkdir $HOME/Code/blade-ui-kit
-mkdir $HOME/Code/laravel
-
-# Clone Github repositories
-./clone.sh
+brew bundle --file=./brewfile/taking.Brewfile
 
 # Symlink the Mackup config file to the home directory
 ln -s ./.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
+
+# Todo: vs code extensions 설치
