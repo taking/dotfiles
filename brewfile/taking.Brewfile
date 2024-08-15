@@ -32,12 +32,11 @@ brew "curlie"                         # Power of curl, ease of use of httpie
 brew "procs"                          # Modern replacement for ps written by Rust
 brew "speedtest-cli"                  # Command-line interface for https://speedtest.net bandwidth tests
 brew "helix"                          # Post-modern modal text editor
-brbe "ripgrep"                        # Search tool like grep and The Silver Searcher
+brew "ripgrep"                        # Search tool like grep and The Silver Searcher
 brew "tldr"                           # Simplified and community-driven man pages
 brew "broot"                          # New way to see and navigate directory trees
 brew "gping"                          # Ping, but with a graph
 brew "nnn"                            # Tiny, lightning fast, feature-packed file manager
-brew "balenaetcher"		      # Tool to flash OS images to SD cards & USB drives
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-autosuggestions"
@@ -82,9 +81,10 @@ cask "rectangle-pro"                  # Window snapping tool
 cask "espanso"                        # Cross-platform Text Expander written in Rust
 cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
 cask "transmit"                       # File transfer application (Paid License)
-cask "applite"			      # User-friendly GUI app for Homebrew
-cask "codeedit"			      # lightweight, natively-built editor
-cask "jan"			      # Offline AI chat tool
+cask "applite"                        # User-friendly GUI app for Homebrew
+cask "codeedit"                       # lightweight, natively-built editor
+cask "jan"                            # Offline AI chat tool
+cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
 # cask "docker"                         # Pack, ship and run any application as a lightweight container
 # cask "transmission"                   # Open-source BitTorrent client
 # cask "rocket"                         # Emoji picker optimised for blind people
@@ -112,7 +112,34 @@ mas "Pixea", id: 1507782672
 # whalebrew "linuxserver/ffmpeg"
 
 # vs code extenstion
-# vscode "GitHub.codespaces"
+# - ai
+# vscode "GitHub.copilot"
+# - 공통
+vscode "starkwang.markdown"
+vscode "eamodio.gitlens"
+vscode "ms-vscode-remote.remote-containers"
+vscode "GitHub.vscode-pull-request-github"
+vscode "2gua.rainbow-brackets"
+vscode "Arjun.swagger-viewer"
+vscode "mikestead.dotenv"
+vscode "ldez.ignore-files"
+vscode "mhutchie.git-graph"
+vscode "Gruntfuggly.todo-tree"
+vscode "wayou.vscode-todo-highlight"
+vscode "oderwat.indent-rainbow"
+vscode "RoscoP.ActiveFileInStatusBar"
+vscode "vscode-icons-team.vscode-icons"
+vscode "MS-CEINTL.vscode-language-pack-ko"
+vscode "rangav.vscode-thunder-client"
+# - backend
+# - frontend
+vscode "formulahendry.auto-rename-tag"
+vscode "formulahendry.auto-close-tag"
+vscode "SimonSiefke.svg-preview"
+vscode "kisstkondoros.vscode-gutter-preview"
+vscode "naumovs.color-highlight"
+vscode "vincaslt.highlight-matching-tag"
+vscode "mkxml.vscode-filesize"
 
 # etc app
 # Bartender 4 (Paid License)

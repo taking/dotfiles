@@ -395,7 +395,7 @@ defaults write com.apple.dock showhidden -bool true
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 
 # 런치패드를 재설정하되 바탕화면 배경화면은 그대로 유지하기
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
+# find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
