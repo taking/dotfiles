@@ -54,11 +54,10 @@ cask "fleet"                          # Hybrid IDE and text editor
 cask "typora"                         # Markdown Editor (Paid License)
 cask "adguard"                        # Remove Ads (Paid License)
 cask "rectangle-pro"                  # Drag windows and drop them on screen edges and corners to snap (Paid License)
-cask "dash"                           # Api Documentation (Paid License)
 cask "dropbox"                        # Secure Cloud Storage
 cask "notion"                         # Workspace for wiki, docs & projects
 cask "notion-calendar"                # Calendar for professionals and teams
-cask "calendar-366"                   # Calendar (Paid License)
+# cask "calendar-366"                   # Calendar (Paid License)
 cask "fantastical"                    # Calendar software (Paid License)
 cask "bruno"                          # Opensource IDE for exploring and testing api's
 cask "cleanshot"                      # Screen capturing tool (Paid License)
@@ -67,9 +66,8 @@ cask "sensei"                         # Monitors the computer system and optimis
 cask "soundsource"                    # Sound and audio controller (Paid License)
 cask "tableplus"                      # Native GUI tool for relational databases (Paid License)
 cask "raycast"                        # Control your tools with a few keystrokes
-cask "quitter"                        # Automatically hides or quits apps after periods of inactivity (Paid License)
+cask "quit-all"                       # Quickly quit one, some, or all apps (Paid License)
 cask "airbuddy"                       # AirPods companion app (Paid License)
-cask "readdle-spark"                  # Email client
 cask "pdf-expert"                     # PDF reader, editor and annotator (Paid License)
 cask "unclutter"                      # Desktop storage area for notes, files and pasteboard clips (Paid License)
 cask "latest"                         # Utility that shows the latest app updates
@@ -83,8 +81,7 @@ cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
 cask "transmit"                       # File transfer application (Paid License)
 cask "applite"                        # User-friendly GUI app for Homebrew
 cask "codeedit"                       # lightweight, natively-built editor
-cask "jan"                            # Offline AI chat tool
-cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
+# cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
 # cask "docker"                         # Pack, ship and run any application as a lightweight container
 # cask "transmission"                   # Open-source BitTorrent client
 # cask "rocket"                         # Emoji picker optimised for blind people
@@ -107,6 +104,7 @@ mas "HwpMac2014VIEWER", id: 416746898
 mas "Amphetamine", id: 937984704
 mas "UpNote", id: 1398373917
 mas "Pixea", id: 1507782672
+mas "Spark Classic – Email App", id: 1176895641
 
 # whalebrew
 # whalebrew "linuxserver/ffmpeg"
