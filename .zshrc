@@ -43,4 +43,13 @@ case $TERM in (xterm*)
 bindkey "^[OH" beginning-of-line
 bindkey "^[OF" end-of-line
 esac
-source /Users/taking/.config/broot/launcher/bash/br
+
+mc () {
+  if [ $# -ne 1 ]; then
+    echo 'usage: mc <dir-name>'
+    return 137
+  fi
+  # 폴더 생성 후 폴더로 진입
+  local dir_name="$1"
+  mkdir -p "$dir_name" && cd "$dir_name"
+}

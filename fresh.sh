@@ -35,5 +35,5 @@ brew bundle --file=./brewfile/taking.Brewfile
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
 
-#
+# Set Configuration
 source ./.config
