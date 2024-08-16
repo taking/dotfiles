@@ -1,0 +1,106 @@
+{
+    "editor.fontFamily": "Hack, D2Coding, Consolas, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 17,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent",
+    "editor.fontLigatures": true,
+    "editor.rulers": [100, 120],
+    "editor.cursorBlinking": "phase",
+    "editor.guides.indentation": true,
+    "editor.codeActionsOnSave": {},
+    "editor.lineHeight": 26,
+    "editor.suggestSelection": "first",
+    "editor.renderLineHighlight": "gutter",
+    "editor.suggest.showStatusBar": true,
+    "files.eol": "\n",
+    "terminal.integrated.fontSize": 18,
+    "ActiveFileInStatusBar.enable": true,
+    "ActiveFileInStatusBar.fullpath": true,
+    "ActiveFileInStatusBar.revealFile": false,
+  
+    // Theme & Icon Start
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Monokai",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    // vscode-icons
+    "vsicons.dontShowNewVersionMessage": true,
+    // Theme & Icon Stop
+  
+    // Go Start
+    "go.lintOnSave": "file",
+    "go.formatTool": "goimports",
+    "go.languageServerFlags": ["-rpc.trace"],
+    "go.useLanguageServer": false,
+    "gopls": { "ui.diagnostic.staticcheck": false },
+    "[go]": {
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+    // go End
+  
+    // Prettier - Code formatter
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    //한 줄이 이 글자수를 넘게 되면 들여쓰기되어 코드가 세로로 정리된다. (default: 80)
+    "prettier.printWidth": 150,
+    //탭 너비 (default: 2)
+    "prettier.tabWidth": 2,
+    //탭 사용 여부. 참이면 탭이있는 줄을 들여 쓰기 한다. (default: false)
+    "prettier.useTabs": false,
+    //세미클론 강제 여부 (default: true)
+    "prettier.semi": true,
+    //홑따옴표를 쓸건지 설정. true -> [ " -> ' ](default: false)
+    "prettier.singleQuote": false,
+    "prettier.jsxSingleQuote": false,
+    /*객체, 배열, 함수 등의 후행에 쉼표를 찍을지 제어
+      "none" - 쉼표를 붙히지 않음
+      "es5" - ES5에서 유효한 후행 쉼표 붙힘 (객체, 배열 등)
+      "all" - 가능하면 후행 쉼표를 붙힘 (함수 인수)*/
+    "prettier.trailingComma": "all",
+    //객체 리터럴 사용시 괄호에 공백 삽입 여부 (default: true)
+    "prettier.bracketSpacing": true,
+    // JSX의 마지막 `>`를 다음 줄로 내릴지 여부
+    "prettier.jsxBracketSameLine": false,
+    //단독 화살표 함수의 매개 변수 주위에 괄호를 자동으로 붙힘 (default: 'avoid')
+    // always -> (x) => x
+    // avoid -> x => x
+    "prettier.arrowParens": "avoid",
+    //vue 파일의 script와 style태그 들여쓰기 여부
+    "prettier.vueIndentScriptAndStyle": false,
+    //맨마지막 줄 넣는지 여부
+    "prettier.endOfLine": "auto",
+  
+    // Gitlens Start
+    "gitlens.changes.toggleMode": "file",
+    "gitlens.defaultDateLocale": "ko-KR",
+    "gitlens.defaultDateFormat": "YYYY-MM-DD H:MM:mm",
+    "gitlens.codeLens.scopes": ["document", "containers"],
+    "gitlens.advanced.messages": {
+      "suppressShowKeyBindingsNotice": true
+    },
+    // Gitlens End
+  
+    // auto-close-tag Start
+    "auto-close-tag.SublimeText3Mode": true,
+    "auto-close-tag.activationOnLanguage": [
+      "html",
+      "xml",
+      "php",
+      "css",
+      "javascript",
+      "js",
+      "vue"
+    ],
+    // auto-close-tag End
+  
+    // indentRainbow Start
+    "indentRainbow.ignoreErrorLanguages": ["markdown"],
+    // indentRainbow End
+  
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active"
+  }
