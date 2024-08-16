@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# dotfiles 경로
+export DOTFILES=$HOME/.DOTFILES
+
 echo "Setting up your Mac..."
 
 # Oh My Zsh 설치 확인
@@ -17,7 +20,7 @@ fi
 
 # 기존에 .zshrc 가 있다면 제거하고, .dotfiles/.zshrc 를 심볼링 링크로 연결
 rm -rf $HOME/.zshrc
-ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -sw ${DOTFILES}/.zshrc $HOME/.zshrc
 
 # Homebrew telemetry 끄기
 brew analytics off
@@ -28,9 +31,6 @@ brew update
 # homebrew Bundle로 일괄 설치 실행(cf. taking.Brewfile)
 brew tap homebrew/bundle
 brew bundle --file=./brewfile/taking.Brewfile
-
-# Symlink the Mackup config file to the home directory
-ln -s ./.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
