@@ -127,8 +127,10 @@ vscode "wayou.vscode-todo-highlight"
 vscode "oderwat.indent-rainbow"
 vscode "RoscoP.ActiveFileInStatusBar"
 vscode "vscode-icons-team.vscode-icons"
+vscode "GitHub.github-vscode-theme"
 vscode "MS-CEINTL.vscode-language-pack-ko"
 vscode "rangav.vscode-thunder-client"
+vscode "usernamehw.errorlens"
 # - backend
 # - frontend
 vscode "formulahendry.auto-rename-tag"
