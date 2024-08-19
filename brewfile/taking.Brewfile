@@ -46,7 +46,6 @@ brew "zsh-syntax-highlighting"
 
 # Casks
 # cask "karabiner-elements"             # Keyboard Customizer
-cask "bitwarden"                      # Password Manager
 cask "iterm2"                         # macOS Terminal
 cask "termius"                        # SSH client
 cask "warp"                           # Rust-based terminal with AI built Terminal
@@ -107,6 +106,7 @@ mas "Amphetamine", id: 937984704
 mas "UpNote", id: 1398373917
 mas "Pixea", id: 1507782672
 mas "Spark Classic – Email App", id: 1176895641
+mas "Bitwarden", id: 1352778147
 
 # whalebrew
 # whalebrew "linuxserver/ffmpeg"
