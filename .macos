@@ -91,12 +91,12 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Follow the keyboard focus while zoomed in
 # defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
-# Disable press-and-hold for keys in favor of key repeat
-# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# 키 반복을 위해 키에 대한 길게 누르기 비활성화
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-# Set a blazingly fast keyboard repeat rate
-# defaults write NSGlobalDomain KeyRepeat -int 1
-# defaults write NSGlobalDomain InitialKeyRepeat -int 10
+# 빠른 키보드 반복 속도 설정
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # 언어 및 텍스트 형식 설정
 defaults write NSGlobalDomain AppleLanguages -array "ko" "en"
@@ -349,18 +349,17 @@ defaults write com.apple.dock minimize-to-application -bool true
 # Show indicator lights for open applications in the Dock
 # defaults write com.apple.dock show-process-indicators -bool true
 
-# Wipe all (default) app icons from the Dock
-# This is only really useful when setting up a new Mac, or if you don’t use
-# the Dock to launch apps.
+# Dock에서 모든(기본값) 앱 아이콘 지우기
+# 이 기능은 새 Mac을 설정할 때나 Dock을 사용하여 앱을 실행하지 않는 경우에만 유용합니다.
 defaults write com.apple.dock persistent-apps -array
 
-# Don’t animate opening applications from the Dock
+# Dock 애플리케이션 끄기
 defaults write com.apple.dock launchanim -bool false
 
-# Speed up Mission Control animations
+#  미션 컨트롤 애니메이션 속도 향상
 # defaults write com.apple.dock expose-animation-duration -float 0.1
 
-# Don’t group windows by application in Mission Control
+# 미션 컨트롤에서 애플리케이션별로 창을 그룹화하지 않기
 # (i.e. use the old Exposé behavior instead)
 # defaults write com.apple.dock expose-group-by-app -bool false
 
@@ -381,9 +380,6 @@ defaults write com.apple.dock showhidden -bool true
 
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
-
-# 런치패드를 재설정하되 바탕화면 배경화면은 그대로 유지하기
-# find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
