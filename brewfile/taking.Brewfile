@@ -85,7 +85,6 @@ cask "codeedit"                       # lightweight, natively-built editor
 # cask "jetbrains-toolbox"              # JetBrains tools manager (Paid License)
 # cask "forklift"                       # File Manager (Paid License)
 # cask "maccy"                          # Clipboard manager
-# cask "espanso"                        # Cross-platform Text Expander written in Rust
 
 # fonts
 cask "font-d2coding"
