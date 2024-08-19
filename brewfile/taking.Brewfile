@@ -74,7 +74,7 @@ cask "latest"                         # Utility that shows the latest app update
 cask "imageoptim"                     # Tool to optimise images to a smaller size
 cask "menubarx"                       # Menu bar browser (Paid License)
 cask "motrix"                         # Open-source download manager
-cask "maccy"                          # Clipboard manager
+# cask "maccy"                          # Clipboard manager
 cask "rectangle-pro"                  # Window snapping tool
 # cask "espanso"                        # Cross-platform Text Expander written in Rust
 cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
