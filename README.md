@@ -42,7 +42,19 @@
 
 🎉 뿌뿌! 맥 설정이 완료되었습니다!
 
-## macos 설정
+<br />
+
+## 콘픽 설정 (`.config`)
+- Karabiner 심볼링 링크 설정
+  - `ln -sw ${DOTFILES}/config/karabiner.json ${HOME}/.config/karabiner/karabiner.json`
+
+- VS Code, Cursor 심볼링 링크 설정
+  - `ln -sw ${DOTFILES}/config/vscode-settings.json ${HOME}/Library/Application Support/Code/User/settings.json`
+  - `ln -sw ${DOTFILES}/config/vscode-settings.json ${HOME}/Library/Application Support/Cursor/User/settings.json`
+
+<br />
+
+## macos 설정 (`.macos`)
 
 ### 1. 일반 UI/UX 설정
 
