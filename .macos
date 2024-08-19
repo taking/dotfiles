@@ -55,13 +55,6 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
 
-# Reveal IP address, hostname, OS version, etc. when clicking the clock
-# in the login window
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
-# Disable Notification Center and remove the menu bar icon
-# launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -105,18 +98,13 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # defaults write NSGlobalDomain KeyRepeat -int 1
 # defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
-# Set language and text formats
-# Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
-# `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "ko" "nl"
+# 언어 및 텍스트 형식 설정
+defaults write NSGlobalDomain AppleLanguages -array "ko" "en"
 defaults write NSGlobalDomain AppleLocale -string "ko_KR@currency=WON"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
-# Show language menu in the top right corner of the boot screen
-# sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
-
-# Set the timezone; see `sudo systemsetup -listtimezones` for other values
+# 표준 시간대 설정
 sudo systemsetup -settimezone "Asia/Seoul" > /dev/null
 
 # Stop iTunes from responding to the keyboard media keys
@@ -166,12 +154,12 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Enable subpixel font rendering on non-Apple LCDs
+# Apple 이외의 LCD에서 서브픽셀 글꼴 렌더링 활성화
 # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
 defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # Enable HiDPI display modes (requires restart)
-# sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
 # Finder                                                                      #
@@ -242,7 +230,7 @@ defaults write com.apple.finder NewWindowTarget -string "PfHm"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-# Disable disk image verification
+# 디스크 이미지 검증 비활성화
 # defaults write com.apple.frameworks.diskimages skip-verify -bool true
 # defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
 # defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
@@ -325,13 +313,13 @@ defaults write com.apple.screencapture "type" -string "png"
 # reference. https://macos-defaults.com/dock                             #
 ###############################################################################
 
-# Docker 위치 (Default: Bottom)
+# Dock 위치 (Default: Bottom)
 defaults write com.apple.dock "orientation" -string "bottom"
 
-# Docker 사이즈 (Default: 48)
+# Dock 사이즈 (Default: 48)
 defaults write com.apple.dock "tilesize" -int "48"
 
-# Docker 숨기기 (Default: false)
+# Dock 숨기기 (Default: false)
 defaults write com.apple.dock "autohide" -bool true
 
 # 자동 숨기기 딜레이 설정 (Default: 0.2)
@@ -488,22 +476,22 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Mac App Store                                                               #
 ###############################################################################
 
-# Enable the WebKit Developer Tools in the Mac App Store
+# Mac App Store에서 WebKit 개발자 도구 활성화하기
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 
-# Enable the automatic update check
+# 자동 업데이트 확인 사용 설정
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 
-# Check for software updates daily, not just once per week
+# 일주일에 한 번이 아닌 매일 소프트웨어 업데이트 확인
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-# Download newly available updates in background
+# 백그라운드에서 새로 사용 가능한 업데이트 다운로드
 defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 
-# Install System data files & security updates
+# 시스템 데이터 파일 및 보안 업데이트 설치
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
-# Turn on app auto-update
+# 앱 자동 업데이트 켜기
 defaults write com.apple.commerce AutoUpdate -bool true
 
 ###############################################################################

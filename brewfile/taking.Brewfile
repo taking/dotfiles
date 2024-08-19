@@ -7,7 +7,6 @@ brew "coreutils"                      # Install GNU Core Utilities
 brew "openjdk@21"                     # Java Development Kit
 brew "asciinema"                      # Terminal Record
 brew "helix"                          # Post-modern modal text editor
-brew "mackup"                         # MacBackup
 brew "python3"
 brew "asciinema"                      # Record terminal sessions
 brew "git"
@@ -45,8 +44,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 # Casks
-# cask "karabiner-elements"             # Keyboard Customizer
-cask "iterm2"                         # macOS Terminal
+cask "karabiner-elements"             # Keyboard Customizer
 cask "termius"                        # SSH client
 cask "warp"                           # Rust-based terminal with AI built Terminal
 cask "cursor"                         # The AI Code Editor
@@ -75,9 +73,7 @@ cask "latest"                         # Utility that shows the latest app update
 cask "imageoptim"                     # Tool to optimise images to a smaller size
 cask "menubarx"                       # Menu bar browser (Paid License)
 cask "motrix"                         # Open-source download manager
-# cask "maccy"                          # Clipboard manager
 cask "rectangle-pro"                  # Window snapping tool
-# cask "espanso"                        # Cross-platform Text Expander written in Rust
 cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
 cask "transmit"                       # File transfer application (Paid License)
 cask "applite"                        # User-friendly GUI app for Homebrew
@@ -88,6 +84,8 @@ cask "codeedit"                       # lightweight, natively-built editor
 # cask "rocket"                         # Emoji picker optimised for blind people
 # cask "jetbrains-toolbox"              # JetBrains tools manager (Paid License)
 # cask "forklift"                       # File Manager (Paid License)
+# cask "maccy"                          # Clipboard manager
+# cask "espanso"                        # Cross-platform Text Expander written in Rust
 
 # fonts
 cask "font-d2coding"
@@ -107,6 +105,7 @@ mas "UpNote", id: 1398373917
 mas "Pixea", id: 1507782672
 mas "Spark Classic – Email App", id: 1176895641
 mas "Bitwarden", id: 1352778147
+mas "Auto HD + FPS for YouTube", id: 1546729687
 
 # whalebrew
 # whalebrew "linuxserver/ffmpeg"
