@@ -38,6 +38,7 @@ brew "tldr"                           # Simplified and community-driven man page
 brew "broot"                          # New way to see and navigate directory trees
 brew "gping"                          # Ping, but with a graph
 brew "nnn"                            # Tiny, lightning fast, feature-packed file manager
+brew "fnm"                            # Fast and simple Node.js version manager, built in Rust
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-autosuggestions"
