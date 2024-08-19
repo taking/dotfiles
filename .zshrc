@@ -38,6 +38,15 @@ git config --global user.email "taking@duck.com"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global alias.lga "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
 
+# Git Delta 설정
+git config --global core.pager "delta"
+git config --global interactive.diffFilter "delta --color-only"
+git config --global merge.conflitstyle "diff3"
+git config --global diff.colorMoved "default"
+git config --global delta.navigate true
+git config --global delta.line-numbers true
+git config --global delta.side-by-side true
+
 # home / end 키 설정
 case $TERM in (xterm*)
 bindkey "^[OH" beginning-of-line

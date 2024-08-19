@@ -12,6 +12,7 @@ brew "python3"
 brew "asciinema"                      # Record terminal sessions
 brew "git"
 brew "git-lfs"
+brew "git-delta"
 brew "go"                             # Open source programming language to build simple/reliable/efficient software
 brew "jq"                             # Lightweight and flexible command-line JSON processor
 brew "neofetch"                       # System Information
