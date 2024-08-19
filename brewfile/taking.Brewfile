@@ -45,7 +45,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 # Casks
-cask "karabiner-elements"             # Keyboard Customizer
+# cask "karabiner-elements"             # Keyboard Customizer
 cask "bitwarden"                      # Password Manager
 cask "iterm2"                         # macOS Terminal
 cask "termius"                        # SSH client
