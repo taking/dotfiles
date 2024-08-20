@@ -13,7 +13,7 @@ alias ttfb='curl -so /dev/null -w "HTTP %{http_version} %{http_code} Remote IP: 
 alias vi="hx"
 alias vim="hx"
 alias du='dust'
-alias dh='du -sH'
+alias dh='du -s'
 alias df='duf'
 alias curl='curlie'
 alias ps='procs'
@@ -21,7 +21,7 @@ alias find='fd'
 alias history='fc -il 1'
 alias grep='rg'
 alias man='tldr'
-alias tree='broot'
+alias tree='broot -s'
 alias ping='gping'
 alias nnn='nnn -T dst'
 
