@@ -20,7 +20,6 @@ brew "tree"
 brew "unar"
 brew "wget"
 brew "whalebrew"                      # Homebrew, but with Docker images
-brew "tailscale"                      # Easiest, most secure way to use WireGuard and 2FA
 brew "lsd"                            # Clone of ls with colorful output, file type icons, and more
 brew "bat"                            # Clone of cat(1) with syntax highlighting and Git integration
 brew "dust"                           # More intuitive version of du in rust
@@ -78,6 +77,7 @@ cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
 cask "transmit"                       # File transfer application (Paid License)
 cask "applite"                        # User-friendly GUI app for Homebrew
 cask "codeedit"                       # lightweight, natively-built editor
+cask "topnotch"                       # Utility to hide the notch
 # cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
 # cask "docker"                         # Pack, ship and run any application as a lightweight container
 # cask "transmission"                   # Open-source BitTorrent client
@@ -104,6 +104,7 @@ mas "UpNote", id: 1398373917
 mas "Pixea", id: 1507782672
 mas "Spark Classic – Email App", id: 1176895641
 mas "Bitwarden", id: 1352778147
+mas "Tailscale", id: 1475387142
 mas "Auto HD + FPS for YouTube", id: 1546729687
 
 # whalebrew
