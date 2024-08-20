@@ -410,31 +410,6 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 # defaults write com.apple.dock wvous-bl-modifier -int 0
 
 ###############################################################################
-# Safari & WebKit                                                             #
-###############################################################################
-
-# 개인정보 보호: Apple에 검색 쿼리 전송 금지
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-
-# Safari Full URL 표시 (Default: false)
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-
-# Safari 기본 페이지를 'about:blank'로 설정 (Default: false)
-defaults write com.apple.Safari HomePage -string "about:blank"
-
-# Safari 개발자 도구 활성화 (Default: false)
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-
-# Safari 위조된 웹 사이트 경고
-defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
-
-# Safari 확장 자동 업데이트
-defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
-
-###############################################################################
 # Terminal & iTerm 2                                                          #
 ###############################################################################
 
