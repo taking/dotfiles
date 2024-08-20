@@ -6,10 +6,6 @@
 
 ## How-to
 
-### 설치 전에
-
-- 포맷 전에 mackup을 통해 설정을 백업을 진행해야합니다.
-
 ### 맥 구성하기
 
 백업 후에 아래 과정을 따라 새로운 MAC을 설정합니다.
@@ -35,8 +31,7 @@
     ```zsh
     cd $HOME/.dotfiles && ./fresh.sh
     ```
-5. mackup을 통해 설정을 복구하세요. `mackup restore`
-7. 재부팅
+4. 재부팅
 
 <br />
 
@@ -51,6 +46,9 @@
 - VS Code, Cursor 심볼링 링크 설정
   - `ln -sw ${DOTFILES}/config/vscode-settings.json ${HOME}/Library/Application Support/Code/User/settings.json`
   - `ln -sw ${DOTFILES}/config/vscode-settings.json ${HOME}/Library/Application Support/Cursor/User/settings.json`
+
+- Helix 심볼링 링크 설정
+  - `ln -sw ${DOTFILES}/config/helix-config.toml ${HOME}/.config/helix/config.toml`
 
 <br />
 
