@@ -132,6 +132,9 @@ vscode "GitHub.github-vscode-theme"
 vscode "MS-CEINTL.vscode-language-pack-ko"
 vscode "rangav.vscode-thunder-client"
 vscode "usernamehw.errorlens"
+vscode "mechatroner.rainbow-csv"
+vscode "aaron-bond.better-comments"
+vscode "rhalaly.scope-to-this"
 # - backend
 # - frontend
 vscode "formulahendry.auto-rename-tag"
@@ -141,6 +144,7 @@ vscode "kisstkondoros.vscode-gutter-preview"
 vscode "naumovs.color-highlight"
 vscode "vincaslt.highlight-matching-tag"
 vscode "mkxml.vscode-filesize"
+vscode "voldemortensen.rainbow-tags"
 
 # etc app
 # Bartender 4 (Paid License)
