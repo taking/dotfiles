@@ -78,6 +78,7 @@ cask "transmit"                       # File transfer application (Paid License)
 cask "applite"                        # User-friendly GUI app for Homebrew
 cask "codeedit"                       # lightweight, natively-built editor
 cask "topnotch"                       # Utility to hide the notch
+cask "battery"                        # App for managing battery charging.
 # cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
 # cask "docker"                         # Pack, ship and run any application as a lightweight container
 # cask "transmission"                   # Open-source BitTorrent client
