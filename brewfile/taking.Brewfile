@@ -78,7 +78,6 @@ cask "rectangle-pro"                  # Window snapping tool
 cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
 cask "transmit"                       # File transfer application (Paid License)
 cask "applite"                        # User-friendly GUI app for Homebrew
-cask "codeedit"                       # lightweight, natively-built editor
 cask "topnotch"                       # Utility to hide the notch
 cask "battery"                        # App for managing battery charging.
 cask "dbngin"                         # Database version management tool
@@ -122,7 +121,6 @@ vscode "starkwang.markdown"
 vscode "eamodio.gitlens"
 vscode "ms-vscode-remote.remote-containers"
 vscode "GitHub.vscode-pull-request-github"
-vscode "2gua.rainbow-brackets"
 vscode "Arjun.swagger-viewer"
 vscode "mikestead.dotenv"
 vscode "ldez.ignore-files"
