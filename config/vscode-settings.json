@@ -35,7 +35,7 @@
     "go.lintOnSave": "file",
     "go.formatTool": "goimports",
     "go.languageServerFlags": ["-rpc.trace"],
-    "go.useLanguageServer": false,
+    "go.useLanguageServer": true,
     "gopls": { "ui.diagnostic.staticcheck": false },
     "[go]": {
       "editor.formatOnSave": true,
