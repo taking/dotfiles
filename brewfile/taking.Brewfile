@@ -117,6 +117,7 @@ mas "Auto HD + FPS for YouTube", id: 1546729687
 # - ai
 # vscode "GitHub.copilot"
 # - 공통
+vscode "ms-vscode-remote.remote-ssh"
 vscode "starkwang.markdown"
 vscode "eamodio.gitlens"
 vscode "ms-vscode-remote.remote-containers"
