@@ -31,20 +31,30 @@
     "vsicons.dontShowNewVersionMessage": true,
     // Theme & Icon Stop
   
+
     // Go Start
-    "go.lintOnSave": "file",
-    "go.formatTool": "goimports",
-    "go.languageServerFlags": ["-rpc.trace"],
-    "go.useLanguageServer": true,
-    "gopls": { "ui.diagnostic.staticcheck": false },
     "[go]": {
       "editor.formatOnSave": true,
+      "editor.defaultFormatter": "golang.go",
       "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit"
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit",
       }
     },
+    "go.useLanguageServer": true,
+    "gopls": {
+      "ui.semanticTokens": true,
+      "ui.completion.usePlaceholders": true
+    },
+    "go.formatTool": "goimports",
+    "go.lintTool": "golangci-lint",
+    "go.lintOnSave": "workspace",
+    "go.lintFlags": [
+      "--fast"
+    ],
+    "go.coverOnSave": false,
     // go End
-  
+    
     // Prettier - Code formatter
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -82,9 +92,6 @@
     "gitlens.defaultDateLocale": "ko-KR",
     "gitlens.defaultDateFormat": "YYYY-MM-DD H:MM:mm",
     "gitlens.codeLens.scopes": ["document", "containers"],
-    "gitlens.advanced.messages": {
-      "suppressShowKeyBindingsNotice": true
-    },
     // Gitlens End
   
     // auto-close-tag Start
