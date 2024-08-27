@@ -81,8 +81,9 @@ cask "applite"                        # User-friendly GUI app for Homebrew
 cask "topnotch"                       # Utility to hide the notch
 cask "battery"                        # App for managing battery charging.
 cask "dbngin"                         # Database version management tool
+cask "docker"                         # Pack, ship and run any application as a lightweight container
+cask "bleunlock"                      # Lock/unlock Apple computers using the proximity of a bluetooth low energy device
 # cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
-# cask "docker"                         # Pack, ship and run any application as a lightweight container
 # cask "transmission"                   # Open-source BitTorrent client
 # cask "rocket"                         # Emoji picker optimised for blind people
 # cask "jetbrains-toolbox"              # JetBrains tools manager (Paid License)

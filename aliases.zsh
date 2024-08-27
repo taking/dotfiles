@@ -26,6 +26,7 @@ alias man='tldr'
 alias tree='broot -s'
 alias ping='gping'
 alias nnn='nnn -T dst'
+alias wport='netstat -p tcp -van | grep LISTEN | grep'
 
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="omz reload"
