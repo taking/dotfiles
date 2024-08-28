@@ -4,6 +4,8 @@
 
 이 저장소는 Taking의 Mac의 설정을 설정하고 유지하는데 도움을 주고자 만든 dotfiles 입니다. 이를 통해 수동으로 설치하는 수고를 덜어주고 Applications을 포함한 시스템 설정을 빠르게 설치할 수 있습니다.
 
+<br />
+
 ## How-to
 
 ### 맥 구성하기
@@ -11,26 +13,27 @@
 백업 후에 아래 과정을 따라 새로운 MAC을 설정합니다.
 
 0. 권한 설정
-    시스템 설정 > 개인정보 보호 및 보안 > 전체 디스크 접근 권한 > 터미널 사용 설정
+   시스템 설정 > 개인정보 보호 및 보안 > 전체 디스크 접근 권한 > 터미널 사용 설정
 
 1. SSH 설정
-    [generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 실행:
+   [generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 실행:
 
-    ```zsh
-    curl https://raw.githubusercontent.com/taking/dotfiles/HEAD/ssh.sh | sh -s "taking@duck.com"
-    ```
+   ```zsh
+   curl https://raw.githubusercontent.com/taking/dotfiles/HEAD/ssh.sh | sh -s "taking@duck.com"
+   ```
 
 2. 저장소를 `$HOME/.dotfiles`로 복사:
 
-    ```zsh
-    git clone --recursive git@github.com:taking/dotfiles.git $HOME/.dotfiles
-    ```
+   ```zsh
+   git clone --recursive git@github.com:taking/dotfiles.git $HOME/.dotfiles
+   ```
 
 3. 설치 실행:
 
-    ```zsh
-    cd $HOME/.dotfiles && ./fresh.sh
-    ```
+   ```zsh
+   cd $HOME/.dotfiles && ./fresh.sh
+   ```
+
 4. 재부팅
 
 <br />
@@ -40,15 +43,22 @@
 <br />
 
 ## 콘픽 설정 (`.config`)
+
 - Karabiner 심볼링 링크 설정
+
   - `ln -sw ${DOTFILES}/config/karabiner.json ${HOME}/.config/karabiner/karabiner.json`
 
 - VS Code, Cursor 심볼링 링크 설정
+
   - `ln -sw ${DOTFILES}/config/vscode-settings.json ${HOME}/Library/Application Support/Code/User/settings.json`
   - `ln -sw ${DOTFILES}/config/vscode-settings.json ${HOME}/Library/Application Support/Cursor/User/settings.json`
 
 - Helix 심볼링 링크 설정
+
   - `ln -sw ${DOTFILES}/config/helix-config.toml ${HOME}/.config/helix/config.toml`
+
+- Lsd 심볼링 링크 설정
+  - `ln -sw ${DOTFILES}/config/lsd-config.yaml ${HOME}/.config/lsd/config.toml`
 
 <br />
 
@@ -56,7 +66,7 @@
 
 ### 1. 일반 UI/UX 설정
 
-- 컴퓨터 이름 변경 → `taking-macbook` 
+- 컴퓨터 이름 변경 → `taking-macbook`
 - 부팅 사운드 비활성화
 - 애니메이션 속도 빠르게 변경
 - 파일 저장 및 인쇄를 기본적으로 확장 설정
@@ -95,5 +105,33 @@
 - Dock 최근 사용 앱 표시 비활성화
 - 핫 코너 오른쪽 상단 모서리 설정 → `디스플레이 잠금`
 
+<br />
+
+## backup/raycast (taking 개인용)
+
+### 단축어 설정
+
+- Finder : `Command + E`
+- Notion Calendar : `Shift + Option + C`
+- Visual Studio Code : `Command + Shift + ~`
+- Safari : `Command + Shift + 1`
+- Termius : `Command + Shift + 2`
+- Upnote : `Shift + Option  + U`
+- Warp : `Shift + Option + T`
+- Kakaotalk : `Shift + Option + K`
+- Clipboard History : `Option + H`
+- Search Emoji & Symbols : `Command + Control + Space`
+
+### Alias 설정
+
+- Notion Calendar : `cal`
+- Execute Shell Command : `>`
+- Google Search : `g`
+- Search Files : `f`
+- Search Folders : `ff`
+
+<br />
+
 ## Thanks To...
+
 Fork by [driesvints/dotilfes](https://github.com/driesvints/dotfiles)
