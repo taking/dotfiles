@@ -18,11 +18,25 @@
   "editor.guides.bracketPairs": "active",
   "editor.minimap.enabled": true,
   "editor.minimap.autohide": true,
-  "files.eol": "\n",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleReferences": "gotoAndPeek",
+  "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek",
   "terminal.integrated.fontSize": 12,
   "ActiveFileInStatusBar.enable": true,
   "ActiveFileInStatusBar.fullpath": true,
   "ActiveFileInStatusBar.revealFile": false,
+
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/__MACOSX": true
+  },
 
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "GitHub Dark",
@@ -67,10 +81,15 @@
   "gitlens.changes.toggleMode": "file",
   "gitlens.defaultDateLocale": "ko-KR",
   "gitlens.defaultDateFormat": "YYYY-MM-DD H:MM:mm",
-  "gitlens.codeLens.scopes": ["document", "containers"],
+  "gitlens.codeLens.scopes": ["document", "containers", "blocks"],
 
   "auto-close-tag.SublimeText3Mode": true,
   "auto-close-tag.activationOnLanguage": ["html", "xml", "php", "css", "javascript", "js", "vue"],
 
-  "indentRainbow.ignoreErrorLanguages": ["markdown"]
+  "redhat.telemetry.enabled": false,
+
+  "indentRainbow.ignoreErrorLanguages": [
+    "markdown"
+  ],
+  "workbench.settings.applyToAllProfiles": [],"remote.SSH.remotePlatform": {"coder-vscode.code.dev.taking.kr--taking--cloud-barist":"linux","coder-vscode.code.dev.taking.kr--taking--cm-honeybee":"linux"},"remote.SSH.connectTimeout": 1800
 }
