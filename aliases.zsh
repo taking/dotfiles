@@ -6,7 +6,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias ls='lsd'
 alias ll='ls -lh'
-alias cat='bat'
+alias cat='bat -P --theme Dracula'
 alias tspin='tspin'
 
 # alias fsize='du -hsx * | sort -rh | head -n 10'
@@ -16,7 +16,7 @@ alias vi="hx"
 alias vim="hx"
 alias du='dust'
 alias dh='du -s'
-alias df='duf'
+alias df='duf -only local,fuse'
 alias curl='curlie'
 alias ps='procs'
 alias find='fd'
@@ -27,6 +27,7 @@ alias tree='broot -s'
 alias ping='gping'
 alias nnn='nnn -T dst'
 alias wport='netstat -p tcp -van | grep LISTEN | grep'
+alias weather='curl -s v2.wttr.in/Seoul'
 
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="omz reload"
