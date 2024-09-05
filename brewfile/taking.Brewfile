@@ -49,8 +49,6 @@ cask "karabiner-elements"             # Keyboard Customizer
 cask "termius"                        # SSH client
 cask "warp"                           # Rust-based terminal with AI built Terminal
 cask "cursor"                         # The AI Code Editor
-cask "visual-studio-code"             # Code Editor
-cask "fleet"                          # Hybrid IDE and text editor
 cask "typora"                         # Markdown Editor (Paid License)
 cask "adguard"                        # Remove Ads (Paid License)
 cask "rectangle-pro"                  # Drag windows and drop them on screen edges and corners to snap (Paid License)
@@ -86,7 +84,6 @@ cask "bleunlock"                      # Lock/unlock Apple computers using the pr
 # cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
 # cask "transmission"                   # Open-source BitTorrent client
 # cask "rocket"                         # Emoji picker optimised for blind people
-# cask "jetbrains-toolbox"              # JetBrains tools manager (Paid License)
 # cask "forklift"                       # File Manager (Paid License)
 # cask "maccy"                          # Clipboard manager
 
