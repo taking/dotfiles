@@ -82,10 +82,8 @@ cask "battery"                        # App for managing battery charging.
 cask "dbngin"                         # Database version management tool
 cask "orbstack"                       # Replacement for Docker Desktop
 cask "bleunlock"                      # Lock/unlock Apple computers using the proximity of a bluetooth low energy device
+cask "mac-mouse-fix"                  # Mac Mouse Fix is an app that makes your mouse better (Paid License)
 # cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
-# cask "transmission"                   # Open-source BitTorrent client
-# cask "rocket"                         # Emoji picker optimised for blind people
-# cask "forklift"                       # File Manager (Paid License)
 # cask "maccy"                          # Clipboard manager
 
 # fonts
@@ -103,11 +101,11 @@ mas "Bandizip", id: 1265704574
 mas "HwpMac2014VIEWER", id: 416746898
 mas "Amphetamine", id: 937984704
 mas "UpNote", id: 1398373917
-mas "Pixea", id: 1507782672
 mas "Spark Classic – Email App", id: 1176895641
 mas "Bitwarden", id: 1352778147
 mas "Tailscale", id: 1475387142
 mas "Auto HD + FPS for YouTube", id: 1546729687
+# mas "Friendly Streaming Browser", id: 553245401
 
 # whalebrew
 # whalebrew "linuxserver/ffmpeg"
@@ -150,4 +148,4 @@ vscode "voldemortensen.rainbow-tags"
 
 # etc app
 # Bartender 4 (Paid License)
-# forklift 4 (Paid License)
+# forklift 3 (Paid License)
