@@ -44,6 +44,12 @@
 
   "vsicons.dontShowNewVersionMessage": true,
 
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "[java]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "redhat.java"
+  },
+
   "[go]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "golang.go",
@@ -91,5 +97,10 @@
   "indentRainbow.ignoreErrorLanguages": [
     "markdown"
   ],
-  "workbench.settings.applyToAllProfiles": [],"remote.SSH.remotePlatform": {"coder-vscode.code.dev.taking.kr--taking--cloud-barist":"linux","coder-vscode.code.dev.taking.kr--taking--cm-honeybee":"linux"},"remote.SSH.connectTimeout": 1800
+  "workbench.settings.applyToAllProfiles": [],
+  "remote.SSH.remotePlatform": {
+    "coder-vscode.code.dev.taking.kr--taking--cloud-barist": "linux",
+    "coder-vscode.code.dev.taking.kr--taking--cm-honeybee": "linux"
+  },
+  "remote.SSH.connectTimeout": 1800
 }
