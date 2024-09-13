@@ -8,6 +8,7 @@ alias ls='lsd'
 alias ll='ls -lh'
 alias cat='bat -P --theme Dracula --style="plain"'
 alias lv='tspin --print'
+alias rec='asciinema rec'
 
 # alias fsize='du -hsx * | sort -rh | head -n 10'
 # alias dh='df -h -x tmpfs -x devtmpfs -x squashfs'

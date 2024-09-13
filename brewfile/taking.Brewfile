@@ -38,6 +38,7 @@ brew "gping"                          # Ping, but with a graph
 brew "nnn"                            # Tiny, lightning fast, feature-packed file manager
 brew "fnm"                            # Fast and simple Node.js version manager, built in Rust
 brew "tailspin"                       # Log file highlighter
+brew "croc"                           # Securely send things from one computer to another
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-autosuggestions"
