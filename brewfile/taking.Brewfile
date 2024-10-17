@@ -44,6 +44,7 @@ brew "zsh-completions"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # brew "mailpit"                        # Web and API based SMTP testing
+brew "bottom"                         # Yet another cross-platform graphical process/system monitor
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
