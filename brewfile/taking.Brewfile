@@ -97,7 +97,7 @@ cask "font-meslo-for-powerline"
 cask "font-nanum-gothic"
 
 # Apps
-mas "Sorted³ - 캘린더 노트 할 일", id: 1306893526
+# mas "Sorted³ - 캘린더 노트 할 일", id: 1306893526
 mas "KakaoTalk", id: 869223134
 mas "Bandizip", id: 1265704574
 mas "HwpMac2014VIEWER", id: 416746898
