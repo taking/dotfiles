@@ -4,7 +4,7 @@ tap "oven-sh/bun"
 
 # Binaries/Libraries
 brew "coreutils"                      # Install GNU Core Utilities
-brew "openjdk@21"                     # Java Development Kit
+brew "temurin@21"                     # Java Development Kit from the Eclipse Foundation (Adoptium)
 brew "asciinema"                      # Terminal Record
 brew "helix"                          # Post-modern modal text editor
 brew "python3"
@@ -45,6 +45,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # brew "mailpit"                        # Web and API based SMTP testing
 brew "bottom"                         # Yet another cross-platform graphical process/system monitor
+brew "ffmpeg"                         # Play, record, convert, and stream audio and video
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
