@@ -4,7 +4,6 @@ tap "oven-sh/bun"
 
 # Binaries/Libraries
 brew "coreutils"                      # Install GNU Core Utilities
-brew "temurin@21"                     # Java Development Kit from the Eclipse Foundation (Adoptium)
 brew "asciinema"                      # Terminal Record
 brew "helix"                          # Post-modern modal text editor
 brew "python3"
@@ -45,7 +44,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # brew "mailpit"                        # Web and API based SMTP testing
 brew "bottom"                         # Yet another cross-platform graphical process/system monitor
-brew "ffmpeg"                         # Play, record, convert, and stream audio and video
+# brew "ffmpeg"                         # Play, record, convert, and stream audio and video
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
@@ -89,6 +88,7 @@ cask "reminders-menubar"              # Simple menu bar app to view and interact
 cask "sublime-text"                   # Text editor for code, markup and prose
 # cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
 # cask "maccy"                          # Clipboard manager
+cask "temurin@21"                     # Java Development Kit from the Eclipse Foundation (Adoptium)
 
 # fonts
 cask "font-d2coding"
@@ -112,7 +112,7 @@ mas "Auto HD + FPS for YouTube", id: 1546729687
 # mas "Friendly Streaming Browser", id: 553245401
 
 # whalebrew
-# whalebrew "linuxserver/ffmpeg"
+whalebrew "linuxserver/ffmpeg"
 
 # vs code extenstion
 # - ai
