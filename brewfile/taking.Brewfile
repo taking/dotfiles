@@ -109,6 +109,7 @@ mas "Spark Classic – Email App", id: 1176895641
 mas "Bitwarden", id: 1352778147
 mas "Tailscale", id: 1475387142
 mas "Auto HD + FPS for YouTube", id: 1546729687
+mas "RunCat", id: 1429033973
 # mas "Friendly Streaming Browser", id: 553245401
 
 # whalebrew
