@@ -84,6 +84,8 @@ cask "reminders-menubar"              # Simple menu bar app to view and interact
 # cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
 # cask "maccy"                          # Clipboard manager
 cask "temurin@21"                     # Java Development Kit from the Eclipse Foundation (Adoptium)
+cask "qlmarkdown"                     # Quick Look generator for Markdown files
+cask "quicklook-json"                 # Quick Look plugin for JSON files
 
 # fonts
 cask "font-d2coding"
