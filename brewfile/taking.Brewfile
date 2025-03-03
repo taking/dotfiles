@@ -42,9 +42,8 @@ brew "zsh"
 brew "zsh-completions"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-# brew "mailpit"                        # Web and API based SMTP testing
+brew "mailpit"                        # Web and API based SMTP testing
 brew "bottom"                         # Yet another cross-platform graphical process/system monitor
-# brew "ffmpeg"                         # Play, record, convert, and stream audio and video
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
@@ -74,18 +73,15 @@ cask "latest"                         # Utility that shows the latest app update
 cask "imageoptim"                     # Tool to optimise images to a smaller size
 cask "menubarx"                       # Menu bar browser (Paid License)
 cask "motrix"                         # Open-source download manager
-cask "rectangle-pro"                  # Window snapping tool
 cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
 cask "transmit"                       # File transfer application (Paid License)
 cask "applite"                        # User-friendly GUI app for Homebrew
 cask "topnotch"                       # Utility to hide the notch
 cask "battery"                        # App for managing battery charging.
-cask "dbngin"                         # Database version management tool
 cask "orbstack"                       # Replacement for Docker Desktop
 cask "bleunlock"                      # Lock/unlock Apple computers using the proximity of a bluetooth low energy device
 cask "mac-mouse-fix"                  # Mac Mouse Fix is an app that makes your mouse better (Paid License)
 cask "reminders-menubar"              # Simple menu bar app to view and interact with reminders
-cask "sublime-text"                   # Text editor for code, markup and prose
 # cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
 # cask "maccy"                          # Clipboard manager
 cask "temurin@21"                     # Java Development Kit from the Eclipse Foundation (Adoptium)
