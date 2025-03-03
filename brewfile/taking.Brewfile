@@ -7,7 +7,6 @@ brew "coreutils"                      # Install GNU Core Utilities
 brew "asciinema"                      # Terminal Record
 brew "helix"                          # Post-modern modal text editor
 brew "python3"
-brew "asciinema"                      # Record terminal sessions
 brew "git"
 brew "git-lfs"
 brew "git-delta"
@@ -110,6 +109,7 @@ mas "RunCat", id: 1429033973
 
 # whalebrew
 whalebrew "linuxserver/ffmpeg"
+whalebrew "amazon/aws-cli"
 
 # vs code extenstion
 # - ai
