@@ -153,3 +153,4 @@ vscode "voldemortensen.rainbow-tags"
 # etc app
 # Bartender 4 (Paid License)
 # forklift 3 (Paid License)
+# Antinote (Paid License) - https://antinote.io
