@@ -7,6 +7,7 @@ brew "coreutils"                      # Install GNU Core Utilities
 brew "asciinema"                      # Terminal Record
 brew "helix"                          # Post-modern modal text editor
 brew "python3"
+brew "gpg"                            # GNU Pretty Good Privacy (PGP) package
 brew "git"
 brew "git-lfs"
 brew "git-delta"
