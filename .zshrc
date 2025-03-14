@@ -1,5 +1,5 @@
 # dotfiles 경로
-export DOTFILES=$HOME/.DOTFILES
+export DOTFILES=$HOME/.dotfiles
 export ZSH="$HOME/.oh-my-zsh"
 
 DEFAULT_USER="$USER"
@@ -17,7 +17,13 @@ ZSH_CUSTOM=$DOTFILES
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions alias-tips)
+plugins=(
+  git
+  zsh-completions           #1
+  zsh-autosuggestions       #2
+  zsh-syntax-highlighting   #3
+  alias-tips                #4
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,4 +67,12 @@ mc () {
   # 폴더 생성 후 폴더로 진입
   local dir_name="$1"
   mkdir -p "$dir_name" && cd "$dir_name"
+}
+
+# Update external zsh plugins
+plugin-update() {
+  for d in $ZSH_CUSTOM/plugins/*/.git(/); do
+    echo "Updating ${d:h:t}..."
+    command git -C "${d:h}" pull --ff --recurse-submodules --depth 1 --rebase --autostash
+  done
 }
