@@ -1,6 +1,7 @@
 {
   "editor.fontFamily": "Hack, D2Coding, Consolas, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 12,
+  "editor.lineHeight": 26,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.renderWhitespace": "all",
@@ -9,24 +10,16 @@
   "editor.rulers": [100, 120],
   "editor.cursorBlinking": "phase",
   "editor.guides.indentation": true,
-  "editor.codeActionsOnSave": {},
-  "editor.lineHeight": 26,
-  "editor.suggestSelection": "first",
   "editor.renderLineHighlight": "gutter",
+  "editor.suggestSelection": "first",
   "editor.suggest.showStatusBar": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "editor.minimap.enabled": true,
   "editor.minimap.autohide": true,
-  "editor.gotoLocation.multipleDeclarations": "goto",
-  "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.gotoLocation.multipleImplementations": "goto",
-  "editor.gotoLocation.multipleReferences": "gotoAndPeek",
-  "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek",
+  "editor.codeActionsOnSave": {},
+
   "terminal.integrated.fontSize": 12,
-  "ActiveFileInStatusBar.enable": true,
-  "ActiveFileInStatusBar.fullpath": true,
-  "ActiveFileInStatusBar.revealFile": false,
 
   "files.eol": "\n",
   "files.exclude": {
@@ -41,13 +34,17 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.statusBar.visible": true,
-
   "vsicons.dontShowNewVersionMessage": true,
-
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  
   "[java]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "redhat.java"
+    "editor.defaultFormatter": "redhat.java",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never",
+      "source.fixAll": "explicit"
+    },
+    "java.format.settings.profile": "GoogleStyle",
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/refs/heads/gh-pages/intellij-java-google-style.xml"
   },
 
   "[go]": {
@@ -93,14 +90,8 @@
   "auto-close-tag.activationOnLanguage": ["html", "xml", "php", "css", "javascript", "js", "vue"],
 
   "redhat.telemetry.enabled": false,
-
-  "indentRainbow.ignoreErrorLanguages": [
-    "markdown"
-  ],
+  "indentRainbow.ignoreErrorLanguages": ["markdown"],
   "workbench.settings.applyToAllProfiles": [],
-  "remote.SSH.remotePlatform": {
-    "coder-vscode.code.dev.taking.kr--taking--cloud-barist": "linux",
-    "coder-vscode.code.dev.taking.kr--taking--cm-honeybee": "linux"
-  },
+  "remote.autoForwardPortsSource": "hybrid",
   "remote.SSH.connectTimeout": 1800
 }
