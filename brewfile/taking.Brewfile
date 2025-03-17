@@ -49,7 +49,6 @@ brew "sshs"                           # Graphical command-line client for SSH
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
 cask "termius"                        # SSH client
-cask "warp"                           # Rust-based terminal with AI built Terminal
 cask "cursor"                         # The AI Code Editor
 cask "typora"                         # Markdown Editor (Paid License)
 cask "adguard"                        # Remove Ads (Paid License)
