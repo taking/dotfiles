@@ -1,0 +1,6 @@
+Host "taking-oracle"
+  HostName warp.taking.kr
+  Port 2222
+  User taking:oracle
+  # IdentityFile ~/.dotfiles/ssh/id_ed25519
+  # IdentitiesOnly yes

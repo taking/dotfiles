@@ -13,7 +13,7 @@ brew "git-lfs"
 brew "git-delta"
 brew "go"                             # Open source programming language to build simple/reliable/efficient software
 brew "jq"                             # Lightweight and flexible command-line JSON processor
-brew "neofetch"                       # System Information
+brew "fastfetch"                      # System Information
 brew "tmux"                           # Terminal multiplexer
 brew "tree"
 brew "unar"
@@ -44,6 +44,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "mailpit"                        # Web and API based SMTP testing
 brew "bottom"                         # Yet another cross-platform graphical process/system monitor
+brew "sshs"                           # Graphical command-line client for SSH
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer

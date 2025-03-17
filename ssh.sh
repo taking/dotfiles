@@ -26,3 +26,22 @@ ssh-add --apple-use-keychain $HOME/.ssh/id_ed25519
 # Adding your SSH key to your GitHub account
 # https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
 echo "run 'pbcopy < $HOME/.ssh/id_ed25519.pub' and paste that into GitHub"
+
+
+INCLUDE_LINE="Include ~/.dotfiles/config/ssh-config"
+COMMENT_LINE="# Added by taking Dotfiles"
+CONFIG_FILE="$HOME/.ssh/config"
+
+# 이미 Include 라인이 있는지 확인
+if ! grep -Fxq "$INCLUDE_LINE" "$CONFIG_FILE"; then
+  {
+    echo "$COMMENT_LINE"
+    echo "$INCLUDE_LINE"
+    echo ""  # 빈 줄
+    cat "$CONFIG_FILE"  # 기존 내용 유지
+  } > "${CONFIG_FILE}.tmp"
+  # 원본 파일 덮어쓰기
+  mv -f "${CONFIG_FILE}.tmp" "$CONFIG_FILE"
+  # 권한 재설정 (필요하면)
+  chmod 600 "$CONFIG_FILE"
+fi
