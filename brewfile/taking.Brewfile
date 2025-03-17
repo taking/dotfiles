@@ -47,6 +47,10 @@ brew "bottom"                         # Yet another cross-platform graphical pro
 brew "sshs"                           # Graphical command-line client for SSH
 brew "helm"                           # Kubernetes package manager
 brew "kubernetes-cli"                 # Kubernetes command-line interface
+brew "yazi"                           # Blazing fast terminal file manager written in Rust, based on async I/O
+brew "poppler"                        # PDF rendering library (based on the xpdf-3.0 code base)
+brew "zoxide"                         # Shell extension to navigate your filesystem faster
+brew "fzf"                            # Command-line fuzzy finder written in Go
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
@@ -98,6 +102,7 @@ cask "font-jetbrains-mono"
 cask "font-meslo-lg"
 cask "font-meslo-for-powerline"
 cask "font-nanum-gothic"
+cask "font-symbols-only-nerd-font"
 
 # Apps
 # mas "Sorted³ - 캘린더 노트 할 일", id: 1306893526
