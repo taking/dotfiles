@@ -45,6 +45,8 @@ brew "zsh-syntax-highlighting"
 brew "mailpit"                        # Web and API based SMTP testing
 brew "bottom"                         # Yet another cross-platform graphical process/system monitor
 brew "sshs"                           # Graphical command-line client for SSH
+brew "helm"                           # Kubernetes package manager
+brew "kubernetes-cli"                 # Kubernetes command-line interface
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
