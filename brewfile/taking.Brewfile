@@ -88,6 +88,7 @@ cask "reminders-menubar"              # Simple menu bar app to view and interact
 cask "temurin@21"                     # Java Development Kit from the Eclipse Foundation (Adoptium)
 cask "qlmarkdown"                     # Quick Look generator for Markdown files
 cask "quicklook-json"                 # Quick Look plugin for JSON files
+cask "ghostty"                        # Terminal emulator that uses platform-native UI and GPU acceleration
 
 # fonts
 cask "font-d2coding"
