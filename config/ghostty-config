@@ -1,6 +1,6 @@
-font-family = Hack
+font-family = JetBrains Mono
 font-style = Regular
-font-size = 13
+font-size = 14
 font-thicken = true
 
 adjust-underline-position = 40%
