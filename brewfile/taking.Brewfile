@@ -162,3 +162,4 @@ vscode "voldemortensen.rainbow-tags"
 # Bartender 4 (Paid License)
 # forklift 3 (Paid License)
 # Antinote (Paid License) - https://antinote.io
+# Microsoft Office 365 (Company, Paid License)
