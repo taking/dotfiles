@@ -55,6 +55,7 @@ brew "fzf"                            # Command-line fuzzy finder written in Go
 cask "karabiner-elements"             # Keyboard Customizer
 cask "termius"                        # SSH client
 cask "cursor"                         # The AI Code Editor
+cask "visual-studio-code"             # Open-source code editor
 cask "typora"                         # Markdown Editor (Paid License)
 cask "adguard"                        # Remove Ads (Paid License)
 cask "rectangle-pro"                  # Drag windows and drop them on screen edges and corners to snap (Paid License)
