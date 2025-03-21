@@ -50,6 +50,7 @@ brew "yazi"                           # Blazing fast terminal file manager writt
 brew "poppler"                        # PDF rendering library (based on the xpdf-3.0 code base)
 brew "zoxide"                         # Shell extension to navigate your filesystem faster
 brew "fzf"                            # Command-line fuzzy finder written in Go
+brew "podman"                         # Tool for managing OCI containers and pods
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
