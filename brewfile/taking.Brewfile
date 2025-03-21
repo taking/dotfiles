@@ -1,5 +1,4 @@
 # Taps
-tap "homebrew/bundle"
 tap "oven-sh/bun"
 
 # Binaries/Libraries
@@ -75,7 +74,6 @@ cask "quit-all"                       # Quickly quit one, some, or all apps (Pai
 cask "airbuddy"                       # AirPods companion app (Paid License)
 cask "pdf-expert"                     # PDF reader, editor and annotator (Paid License)
 cask "unclutter"                      # Desktop storage area for notes, files and pasteboard clips (Paid License)
-cask "latest"                         # Utility that shows the latest app updates
 cask "imageoptim"                     # Tool to optimise images to a smaller size
 cask "menubarx"                       # Menu bar browser (Paid License)
 cask "motrix"                         # Open-source download manager
