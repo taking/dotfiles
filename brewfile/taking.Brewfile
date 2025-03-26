@@ -51,6 +51,7 @@ brew "poppler"                        # PDF rendering library (based on the xpdf
 brew "zoxide"                         # Shell extension to navigate your filesystem faster
 brew "fzf"                            # Command-line fuzzy finder written in Go
 brew "podman"                         # Tool for managing OCI containers and pods
+brew "bun"
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
