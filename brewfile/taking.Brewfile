@@ -83,14 +83,10 @@ cask "motrix"                         # Open-source download manager
 cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
 cask "transmit"                       # File transfer application (Paid License)
 cask "applite"                        # User-friendly GUI app for Homebrew
-cask "topnotch"                       # Utility to hide the notch
-cask "battery"                        # App for managing battery charging.
 cask "orbstack"                       # Replacement for Docker Desktop
 cask "bleunlock"                      # Lock/unlock Apple computers using the proximity of a bluetooth low energy device
 cask "mac-mouse-fix"                  # Mac Mouse Fix is an app that makes your mouse better (Paid License)
 cask "reminders-menubar"              # Simple menu bar app to view and interact with reminders
-# cask "balenaetcher"                   # Tool to flash OS images to SD cards & USB drives
-# cask "maccy"                          # Clipboard manager
 cask "temurin@21"                     # Java Development Kit from the Eclipse Foundation (Adoptium)
 cask "qlmarkdown"                     # Quick Look generator for Markdown files
 cask "quicklook-json"                 # Quick Look plugin for JSON files
