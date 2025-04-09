@@ -2,6 +2,7 @@ Host "taking-oracle"
   HostName warp.taking.kr
   Port 2222
   User taking:oracle
+  SetEnv TERM=xterm-256color
   # IdentityFile ~/.dotfiles/ssh/id_ed25519
   # IdentitiesOnly yes
 
@@ -9,5 +10,6 @@ Host "taking-ubuntu"
   HostName warp.taking.kr
   Port 2222
   User taking:ubuntu
+  SetEnv TERM=xterm-256color
   # IdentityFile ~/.dotfiles/ssh/id_ed25519
   # IdentitiesOnly yes
