@@ -25,7 +25,7 @@ brew "duf"                            # Disk Usage/Free Utility - a better 'df' 
 brew "dua-cli"                        # View disk space usage and delete unwanted data, fast
 brew "fd"                             # Simple, fast and user-friendly alternative to find
 brew "mkcert"                         # Simple tool to make locally trusted development certificates
-brew "curlie"                         # Power of curl, ease of use of httpie
+brew "xh"                             # Friendly and fast tool for sending HTTP requests
 brew "procs"                          # Modern replacement for ps written by Rust
 brew "speedtest-cli"                  # Command-line interface for https://speedtest.net bandwidth tests
 brew "helix"                          # Post-modern modal text editor
