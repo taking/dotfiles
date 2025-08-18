@@ -13,3 +13,11 @@ Host "taking-ubuntu"
   SetEnv TERM=xterm-256color
   # IdentityFile ~/.dotfiles/ssh/id_ed25519
   # IdentitiesOnly yes
+  
+Host "taking-develop"
+  HostName warp.taking.kr
+  Port 2222
+  User taking:develop
+  SetEnv TERM=xterm-256color
+  # IdentityFile ~/.dotfiles/ssh/id_ed25519
+  # IdentitiesOnly yes

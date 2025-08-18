@@ -18,7 +18,6 @@ alias vim="hx"
 alias du='dust'
 alias dh='du -s'
 alias df='duf -only local,fuse'
-alias curl='xh'
 alias ps='procs'
 alias find='fd'
 alias history='fc -il 1'

@@ -41,7 +41,6 @@ brew "zsh"
 brew "zsh-completions"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-brew "mailpit"                        # Web and API based SMTP testing
 brew "bottom"                         # Yet another cross-platform graphical process/system monitor
 brew "sshs"                           # Graphical command-line client for SSH
 brew "helm"                           # Kubernetes package manager
@@ -52,6 +51,7 @@ brew "zoxide"                         # Shell extension to navigate your filesys
 brew "fzf"                            # Command-line fuzzy finder written in Go
 brew "podman"                         # Tool for managing OCI containers and pods
 brew "tig"                            # Text interface for Git repositories
+brew "pv"                             # Monitor data's progress through a pipe
 brew "bun"
 
 # Casks
@@ -117,7 +117,8 @@ mas "RunCat", id: 1429033973
 # mas "Friendly Streaming Browser", id: 553245401
 
 # whalebrew
-whalebrew "linuxserver/ffmpeg"
+whalebrew "linuxserver/ffmpeg"      # Play, record, convert, and stream audio and video
+whalebrew "axllent/mailpit"         # Web and API based SMTP testing
 whalebrew "amazon/aws-cli"
 
 # vs code extenstion
