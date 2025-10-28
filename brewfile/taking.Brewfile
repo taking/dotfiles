@@ -53,6 +53,7 @@ brew "podman"                         # Tool for managing OCI containers and pod
 brew "tig"                            # Text interface for Git repositories
 brew "pv"                             # Monitor data's progress through a pipe
 brew "bun"
+berw "age"                            # Simple, modern, secure file encryption
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
@@ -92,6 +93,7 @@ cask "temurin@21"                     # Java Development Kit from the Eclipse Fo
 cask "qlmarkdown"                     # Quick Look generator for Markdown files
 cask "quicklook-json"                 # Quick Look plugin for JSON files
 cask "ghostty"                        # Terminal emulator that uses platform-native UI and GPU acceleration
+cask "bitwarden"                      # Desktop password and login vault
 
 # fonts
 cask "font-d2coding"
