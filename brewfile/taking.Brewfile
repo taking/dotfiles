@@ -54,16 +54,18 @@ brew "tig"                            # Text interface for Git repositories
 brew "pv"                             # Monitor data's progress through a pipe
 brew "bun"
 berw "age"                            # Simple, modern, secure file encryption
+brew "tailscale"                      # Easiest, most secure way to use WireGuard and 2FA
+brew "bitwarden-cli"                  # Secure and free password manager for all of your devices
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer
 cask "termius"                        # SSH client
 cask "cursor"                         # The AI Code Editor
-cask "visual-studio-code"             # Open-source code editor
+# cask "visual-studio-code"             # Open-source code editor
 cask "typora"                         # Markdown Editor (Paid License)
 cask "adguard"                        # Remove Ads (Paid License)
 cask "rectangle-pro"                  # Drag windows and drop them on screen edges and corners to snap (Paid License)
-cask "dropbox"                        # Secure Cloud Storage
+# cask "dropbox"                        # Secure Cloud Storage
 cask "notion"                         # Workspace for wiki, docs & projects
 cask "notion-calendar"                # Calendar for professionals and teams
 # cask "calendar-366"                   # Calendar (Paid License)
@@ -105,15 +107,12 @@ cask "font-nanum-gothic"
 cask "font-symbols-only-nerd-font"
 
 # Apps
-# mas "Sorted³ - 캘린더 노트 할 일", id: 1306893526
 mas "KakaoTalk", id: 869223134
 mas "Bandizip", id: 1265704574
 mas "HwpMac2014VIEWER", id: 416746898
 mas "Amphetamine", id: 937984704
 mas "UpNote", id: 1398373917
-mas "Spark Classic – Email App", id: 1176895641
-mas "Bitwarden", id: 1352778147
-mas "Tailscale", id: 1475387142
+# mas "Spark Classic – Email App", id: 1176895641
 mas "Auto HD + FPS for YouTube", id: 1546729687
 mas "RunCat", id: 1429033973
 # mas "Friendly Streaming Browser", id: 553245401
