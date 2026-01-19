@@ -4,7 +4,6 @@ tap "oven-sh/bun"
 # Binaries/Libraries
 brew "coreutils"                      # Install GNU Core Utilities
 brew "asciinema"                      # Terminal Record
-brew "helix"                          # Post-modern modal text editor
 brew "python3"
 brew "gpg"                            # GNU Pretty Good Privacy (PGP) package
 brew "git"
@@ -27,7 +26,6 @@ brew "fd"                             # Simple, fast and user-friendly alternati
 brew "mkcert"                         # Simple tool to make locally trusted development certificates
 brew "xh"                             # Friendly and fast tool for sending HTTP requests
 brew "procs"                          # Modern replacement for ps written by Rust
-brew "speedtest-cli"                  # Command-line interface for https://speedtest.net bandwidth tests
 brew "helix"                          # Post-modern modal text editor
 brew "ripgrep"                        # Search tool like grep and The Silver Searcher
 brew "tldr"                           # Simplified and community-driven man pages
@@ -69,7 +67,7 @@ cask "rectangle-pro"                  # Drag windows and drop them on screen edg
 cask "notion"                         # Workspace for wiki, docs & projects
 cask "notion-calendar"                # Calendar for professionals and teams
 # cask "calendar-366"                   # Calendar (Paid License)
-cask "fantastical"                    # Calendar software (Paid License)
+# cask "fantastical"                    # Calendar software (Paid License)
 cask "bruno"                          # Opensource IDE for exploring and testing api's
 cask "cleanshot"                      # Screen capturing tool (Paid License)
 cask "movist-pro"                     # Video Player (Paid License)
@@ -84,7 +82,7 @@ cask "unclutter"                      # Desktop storage area for notes, files an
 cask "imageoptim"                     # Tool to optimise images to a smaller size
 cask "menubarx"                       # Menu bar browser (Paid License)
 cask "motrix"                         # Open-source download manager
-cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
+# cask "jordanbaird-ice"                # Menu bar manager (alter. Bartender)
 cask "transmit"                       # File transfer application (Paid License)
 cask "applite"                        # User-friendly GUI app for Homebrew
 cask "orbstack"                       # Replacement for Docker Desktop
@@ -96,6 +94,7 @@ cask "qlmarkdown"                     # Quick Look generator for Markdown files
 cask "quicklook-json"                 # Quick Look plugin for JSON files
 cask "ghostty"                        # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "bitwarden"                      # Desktop password and login vault
+cask "apidog"                         # API development platform
 
 # fonts
 cask "font-d2coding"
@@ -112,10 +111,9 @@ mas "Bandizip", id: 1265704574
 mas "HwpMac2014VIEWER", id: 416746898
 mas "Amphetamine", id: 937984704
 mas "UpNote", id: 1398373917
-# mas "Spark Classic – Email App", id: 1176895641
+mas "Spark Classic – Email App", id: 1176895641
 mas "Auto HD + FPS for YouTube", id: 1546729687
 mas "RunCat", id: 1429033973
-# mas "Friendly Streaming Browser", id: 553245401
 
 # whalebrew
 whalebrew "linuxserver/ffmpeg"      # Play, record, convert, and stream audio and video
@@ -159,7 +157,7 @@ vscode "mkxml.vscode-filesize"
 vscode "voldemortensen.rainbow-tags"
 
 # etc app
-# Bartender 4 (Paid License)
-# forklift 3 (Paid License)
+# Bartender 6 (Paid License)
+# forklift 4 (Paid License)
 # Antinote (Paid License) - https://antinote.io
 # Microsoft Office 365 (Company, Paid License)

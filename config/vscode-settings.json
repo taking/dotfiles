@@ -93,5 +93,9 @@
   "indentRainbow.ignoreErrorLanguages": ["markdown"],
   "workbench.settings.applyToAllProfiles": [],
   "remote.autoForwardPortsSource": "hybrid",
-  "remote.SSH.connectTimeout": 1800
+  "remote.SSH.connectTimeout": 1800,
+  "remote.SSH.remotePlatform": {
+    "orb": "linux"
+  },
+  "window.commandCenter": true
 }
