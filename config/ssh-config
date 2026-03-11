@@ -1,23 +1,20 @@
-Host "taking-oracle"
-  HostName warp.taking.kr
-  Port 2222
-  User taking:oracle
-  SetEnv TERM=xterm-256color
-  # IdentityFile ~/.dotfiles/ssh/id_ed25519
-  # IdentitiesOnly yes
+Host taking-bastion
+  HostName bastion.example.com
+  User USERNAME
+  Port 22
+  IdentityFile ~/.ssh/taking/bastion_id_ed25519
+  ServerAliveInterval 30
+  ServerAliveCountMax 3
 
-Host "taking-ubuntu"
-  HostName warp.taking.kr
-  Port 2222
-  User taking:ubuntu
-  SetEnv TERM=xterm-256color
-  # IdentityFile ~/.dotfiles/ssh/id_ed25519
-  # IdentitiesOnly yes
+Host *-lxc-*
+  User root
+  ProxyJump taking-bastion
+  IdentityFile ~/.ssh/taking/bastion_id_ed25519
+  IdentitiesOnly yes
+  PreferredAuthentications publickey
+  #RequestTTY force
+  #RemoteCommand /bin/bash -lc 'cd /mnt/docker; exec /bin/bash -l'
   
-Host "taking-develop"
-  HostName warp.taking.kr
-  Port 2222
-  User taking:develop
-  SetEnv TERM=xterm-256color
-  # IdentityFile ~/.dotfiles/ssh/id_ed25519
-  # IdentitiesOnly yes
+Host 200-lxc-svc
+  HostName 10.10.0.10
+  HostKeyAlias 200-lxc-svc

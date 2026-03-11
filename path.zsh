@@ -8,3 +8,4 @@ add_to_path() {
 # Load dotfiles binaries
 add_to_path "/opt/whalebrew/bin"
 add_to_path "$(go env GOPATH)/bin"
+add_to_path "${HOME}/.local/bin"
