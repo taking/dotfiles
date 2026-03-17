@@ -58,6 +58,9 @@
     "cascadeWidth" : {
       "int" : 0
     },
+    "centerFixedDimensions" : {
+      "int" : 0
+    },
     "centerHalfCycles" : {
       "int" : 0
     },
@@ -94,8 +97,14 @@
     "cycleSizesIsChanged" : {
       "bool" : false
     },
+    "defaultLayoutExclusion" : {
+      "int" : 98318
+    },
     "disabledApps" : {
 
+    },
+    "dockDetection" : {
+      "int" : 0
     },
     "dockSizePollSeconds" : {
       "double" : 0
@@ -124,6 +133,9 @@
     "fillLeftRightVersion" : {
       "int" : 2
     },
+    "focusRefreshBehavior" : {
+      "int" : 0
+    },
     "footprintAlpha" : {
       "float" : 0.3
     },
@@ -140,16 +152,16 @@
       "int" : 0
     },
     "gapSize" : {
-      "float" : 0
+      "double" : 0
     },
     "gestures" : {
-      "string" : "[10,{\"flags\":0,\"trail\":2},32,{\"trail\":0,\"flags\":262144},33,{\"flags\":524288,\"trail\":0},1,{\"trail\":4,\"flags\":0},11,{\"flags\":0,\"trail\":1},0,{\"flags\":0,\"trail\":3}]"
+      "string" : "[32,{\"flags\":262144,\"trail\":0},33,{\"flags\":524288,\"trail\":0},0,{\"trail\":3,\"flags\":0},1,{\"trail\":4,\"flags\":0},11,{\"trail\":1,\"flags\":0},10,{\"trail\":2,\"flags\":0}]"
     },
     "hapticFeedbackOnSnap" : {
       "int" : 0
     },
     "helperRelaunch" : {
-      "int" : 3
+      "int" : 1
     },
     "hideMenubarIcon" : {
       "bool" : false
@@ -163,10 +175,16 @@
     "iCloudSync" : {
       "int" : 1
     },
+    "iconDrawing" : {
+      "int" : 3
+    },
     "ignoreBehavior" : {
       "int" : 0
     },
     "ignoredSnapAreas" : {
+      "int" : 0
+    },
+    "keyboardShortcutsEnabled" : {
       "int" : 0
     },
     "landscapeSnapAreas" : {
@@ -174,6 +192,9 @@
     },
     "launchOnLogin" : {
       "bool" : true
+    },
+    "layoutSaveType" : {
+      "int" : 2
     },
     "lockstepResizeOnScreenEdge" : {
       "int" : 0
@@ -220,7 +241,16 @@
     "missionControlDraggingDisallowedDuration" : {
       "int" : 250
     },
+    "mouseThrowSyntheticDrag" : {
+      "int" : 0
+    },
     "moveCursorAcrossDisplays" : {
+      "int" : 0
+    },
+    "moveResizeEventThrottling" : {
+      "int" : 0
+    },
+    "moveSpecsWhenDisplayMoves" : {
       "int" : 0
     },
     "multiWindowAllDisplays" : {
@@ -243,6 +273,9 @@
     },
     "obtainWindowOnClick" : {
       "int" : 0
+    },
+    "openWindowLayoutExclusion" : {
+      "int" : 128
     },
     "performRepeatOnThrow" : {
       "int" : 0
@@ -268,7 +301,13 @@
     "relaunchOpensMenu" : {
       "bool" : false
     },
+    "repeatedMaximizeMode" : {
+      "int" : 4
+    },
     "repeatedMaximizeRestores" : {
+      "int" : 0
+    },
+    "resizeFromNearestCorner" : {
       "int" : 0
     },
     "resizeOnDirectionalMove" : {
@@ -284,7 +323,7 @@
       "int" : 2
     },
     "reticleColor" : {
-      "string" : "{\"blue\":0.2,\"alpha\":0.5,\"red\":0.8,\"green\":0.3}"
+      "string" : "{\"green\":0.3,\"red\":0.8,\"blue\":0.2,\"alpha\":0.5}"
     },
     "reticleDisplayMinDist" : {
       "float" : 0
@@ -321,6 +360,9 @@
     },
     "screenEdgeGapsOnMainScreenOnly" : {
       "bool" : false
+    },
+    "screensOrderedByX" : {
+      "int" : 0
     },
     "scrollEdgePauseDistance" : {
       "float" : 60
@@ -379,6 +421,9 @@
     "stashAnimation" : {
       "int" : 0
     },
+    "stashAppIconColorTabs" : {
+      "int" : 0
+    },
     "stashClearScreenEdge" : {
       "int" : 0
     },
@@ -415,6 +460,9 @@
     "stashTabs" : {
       "int" : 0
     },
+    "stashToCorner" : {
+      "int" : 0
+    },
     "stashVisibleWidth" : {
       "float" : 1
     },
@@ -449,10 +497,13 @@
       "int" : 1
     },
     "todoSidebarWidth" : {
-      "float" : 400
+      "double" : 400
     },
     "togggleTodoShortcut" : {
       "string" : "null"
+    },
+    "toggleShortcutsShortcut" : {
+
     },
     "traverseSingleScreen" : {
       "int" : 0
@@ -461,6 +512,9 @@
       "int" : 0
     },
     "unhideStashedWhenFrontmost" : {
+      "int" : 0
+    },
+    "unifiedDisplaySpacesBehavior" : {
       "int" : 0
     },
     "unsnapRestore" : {
@@ -584,6 +638,6 @@
       "modifierFlags" : 786432
     }
   },
-  "timestamp" : 764232681.729928,
-  "version" : "187"
+  "timestamp" : 795399253.057099,
+  "version" : "213"
 }

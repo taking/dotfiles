@@ -4,8 +4,10 @@ alias cls='clear'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ls='lsd'
-alias ll='ls -lh'
+alias ls='lsd --icon always'
+alias ll='lsd -l --icon always'
+alias la='lsd -la --icon always'
+alias lt='lsd --tree --depth2 --icon always'
 alias cat='bat -P --theme Dracula --style="plain"'
 alias lv='tspin --print'
 alias rec='asciinema rec'
@@ -23,7 +25,6 @@ alias find='fd'
 alias history='fc -il 1'
 alias grep='rg'
 alias man='tldr'
-alias tree='broot -s'
 alias gping='gping'
 alias top='btm'
 alias nnn='nnn -T dst'
@@ -32,7 +33,6 @@ alias weather='curl -s v2.wttr.in/Seoul'
 alias info='fastfetch'
 alias z='zoxide'
 
-alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="omz reload"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 

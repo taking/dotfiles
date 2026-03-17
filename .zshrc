@@ -19,6 +19,9 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
   git
+  docker
+  kubectl
+  z
   zsh-completions           #1
   zsh-autosuggestions       #2
   zsh-syntax-highlighting   #3
@@ -59,15 +62,178 @@ bindkey "^[OH" beginning-of-line
 bindkey "^[OF" end-of-line
 esac
 
-mc () {
+mkcd () {
   if [ $# -ne 1 ]; then
-    echo 'usage: mc <dir-name>'
+    echo 'usage: mkcd <dir-name>'
     return 137
   fi
   # 폴더 생성 후 폴더로 진입
   local dir_name="$1"
   mkdir -p "$dir_name" && cd "$dir_name"
 }
+
+extract () {
+  if [ $# -ne 1 ] ; then
+    echo 'usage: extract <file-name>'
+    return 137
+  fi
+  # 암축 형식의 확장자를 찾아 압축 해제
+  case $1 in 
+    *.tar.bz2) tar xjf "$1" ;;
+    *.tar.gz)  tar xzf "$1" ;;
+    *.bz2)     bunzip2 "$1" ;;
+    *.rar)     unrar x "$1" ;;
+    *.gz)      gunzip "$1" ;;
+    *.tar)     tar xf "$1" ;;
+    *.tbz2)    tar xjf "$1" ;;
+    *.tgz)     tar xzf "$1" ;;
+    *.zip)     unzip "$1" ;;
+    *.Z)       uncompress "$1" ;;
+    *.7z)      7z x "$1" ;;
+    *)         echo "cannot extract: $1" ;;    
+  esac
+}
+
+killport() {
+  if [ $# -ne 1 ]; then
+    echo "usage: killport <port-number>"
+    return 137
+  fi
+
+  local port=$1
+  local pids=$(lsof -ti:$port)
+
+  if [ -z "$pids" ]; then
+    echo "No process found on port $port"
+    return 1
+  fi
+
+  echo "Process(es) using port $port:"
+  lsof -i :$port
+
+  read "confirm?Kill these processes? (y/N): "
+
+  if [[ $confirm =~ ^[Yy]$ ]]; then
+    echo "$pids" | xargs kill -9
+    echo "Killed."
+  else
+    echo "Cancelled."
+  fi
+}
+
+tree() {
+  local depth=2
+  local dir="."
+
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      -L)
+        depth="$2"
+        shift 2
+        ;;
+      *)
+        dir="$1"
+        shift
+        ;;
+    esac
+  done
+
+  lsd --tree \
+    --depth "$depth" \
+    --group-dirs first \
+    "$dir"
+    # -a \
+    # --icon always \
+}
+
+up() {
+  local n="${1:-1}"
+  local target=""
+  
+  if ! [[ "$n" =~ ^[0-9]+$ ]]; then
+    echo "usage: up [number]"
+    return 1
+  fi
+
+  for ((i=0; i<n; i++)); do
+    target+="../"
+  done
+
+  cd "$target"
+}
+
+fcd() {
+  local dir
+
+  dir=$(
+    command find . -type d 2>/dev/null \
+      | sed 's#^\./##' \
+      | grep -v '^\.$' \
+      | fzf --height 40% --reverse --prompt='cd> '
+  ) || return
+
+  if [[ -z "$dir" ]]; then
+    echo "No directories found."
+    return 1
+  fi
+
+  cd "$dir"
+}
+
+ff() {
+  local file
+
+  file=$(
+    command find . -type f 2>/dev/null \
+      | sed 's#^\./##' \
+      | fzf --height 40% --reverse --prompt='file> '
+  ) || return
+
+  if [[ -z "$file" ]]; then
+    echo "No files found."
+    return 1
+  fi
+
+  echo "$file"
+}
+
+br() {
+  broot "${1:-.}"
+}
+
+git-switch() {
+  local branch
+
+  git rev-parse --is-inside-work-tree >/dev/null 2>&1 || {
+    echo "Not inside a git repository."
+    return 1
+  }
+
+  branch=$(
+    git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads refs/remotes 2>/dev/null \
+      | grep -v 'HEAD$' \
+      | sed 's#^origin/##' \
+      | sort -u \
+      | fzf \
+          --height 50% \
+          --reverse \
+          --prompt='switch> ' \
+          --preview 'git log --oneline --decorate --color=always -n 15 {}' \
+          --preview-window=right:60%
+  ) || return
+
+  if [[ -z "$branch" ]]; then
+    echo "No branches found."
+    return 1
+  fi
+
+  if git show-ref --verify --quiet "refs/heads/$branch"; then
+    git switch "$branch"
+  else
+    git switch -c "$branch" --track "origin/$branch"
+  fi
+}
+
 
 # Update external zsh plugins
 plugin-update() {
