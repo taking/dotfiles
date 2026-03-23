@@ -36,4 +36,4 @@ alias z='zoxide'
 alias reloadshell="omz reload"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
-export KUBECONFIG=$(printf "%s:" ~/.kube/*-config | sed 's/:$//')
+export KUBECONFIG=$(printf "%s:" ~/.kube/config.d/*-config | sed 's/:$//')

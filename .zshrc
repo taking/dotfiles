@@ -94,33 +94,6 @@ extract () {
   esac
 }
 
-killport() {
-  if [ $# -ne 1 ]; then
-    echo "usage: killport <port-number>"
-    return 137
-  fi
-
-  local port=$1
-  local pids=$(lsof -ti:$port)
-
-  if [ -z "$pids" ]; then
-    echo "No process found on port $port"
-    return 1
-  fi
-
-  echo "Process(es) using port $port:"
-  lsof -i :$port
-
-  read "confirm?Kill these processes? (y/N): "
-
-  if [[ $confirm =~ ^[Yy]$ ]]; then
-    echo "$pids" | xargs kill -9
-    echo "Killed."
-  else
-    echo "Cancelled."
-  fi
-}
-
 tree() {
   local depth=2
   local dir="."
@@ -200,40 +173,6 @@ ff() {
 br() {
   broot "${1:-.}"
 }
-
-git-switch() {
-  local branch
-
-  git rev-parse --is-inside-work-tree >/dev/null 2>&1 || {
-    echo "Not inside a git repository."
-    return 1
-  }
-
-  branch=$(
-    git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads refs/remotes 2>/dev/null \
-      | grep -v 'HEAD$' \
-      | sed 's#^origin/##' \
-      | sort -u \
-      | fzf \
-          --height 50% \
-          --reverse \
-          --prompt='switch> ' \
-          --preview 'git log --oneline --decorate --color=always -n 15 {}' \
-          --preview-window=right:60%
-  ) || return
-
-  if [[ -z "$branch" ]]; then
-    echo "No branches found."
-    return 1
-  fi
-
-  if git show-ref --verify --quiet "refs/heads/$branch"; then
-    git switch "$branch"
-  else
-    git switch -c "$branch" --track "origin/$branch"
-  fi
-}
-
 
 # Update external zsh plugins
 plugin-update() {
