@@ -55,6 +55,7 @@ berw "age"                            # Simple, modern, secure file encryption
 brew "tailscale"                      # Easiest, most secure way to use WireGuard and 2FA
 brew "bitwarden-cli"                  # Secure and free password manager for all of your devices
 brew "direnv"                         # Load/unload environment variables based on $PWD
+brew "zellij"                         # Pluggable terminal workspace, with terminal multiplexer as the base feature
 
 # Casks
 cask "karabiner-elements"             # Keyboard Customizer

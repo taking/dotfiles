@@ -22,6 +22,7 @@ plugins=(
   docker
   kubectl
   z
+  direnv
   zsh-completions           #1
   zsh-autosuggestions       #2
   zsh-syntax-highlighting   #3

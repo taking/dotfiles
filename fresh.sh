@@ -5,6 +5,14 @@ export DOTFILES=$HOME/.DOTFILES
 
 echo "Setting up your Mac..."
 
+# Xcode Command Line Tools 설치 확인
+if ! xcode-select -p &>/dev/null; then
+  echo "Xcode Command Line Tools not found. Installing..."
+  xcode-select --install
+else
+  echo "Xcode Command Line Tools already installed."
+fi
+
 # Oh My Zsh 설치 확인
 if test ! $(which omz); then
   /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"

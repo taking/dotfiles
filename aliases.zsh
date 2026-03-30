@@ -7,16 +7,29 @@ alias mv='mv -i'
 alias ls='lsd --icon always'
 alias ll='lsd -l --icon always'
 alias la='lsd -la --icon always'
-alias lt='lsd --tree --depth2 --icon always'
+alias lt='lsd --tree --depth 2 --icon always'
 alias cat='bat -P --theme Dracula --style="plain"'
 alias lv='tspin --print'
 alias rec='asciinema rec'
 
+# editor
+export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
+export EDITOR="hx"
+export VISUAL="hx"
+
+alias v='hx'
+alias vi='hx'
+alias vim='hx'
+
+alias zc='zellij -l code'
+alias zf='zff'
+alias zd='zcd'
+alias zjl='zellij list-sessions'
+alias zjk='zellij kill-session'
+
 # alias fsize='du -hsx * | sort -rh | head -n 10'
 # alias dh='df -h -x tmpfs -x devtmpfs -x squashfs'
 alias ttfb='curl -so /dev/null -w "HTTP %{http_version} %{http_code} Remote IP: %{remote_ip}\nConnect: %{time_connect}\nTTFB: %{time_starttransfer}\nTotal time: %{time_total}\nDownload speed: %{speed_download}bps\nBytes: %{size_download}\n"'
-alias vi="vi"
-alias vim="hx"
 alias du='dust'
 alias dh='du -s'
 alias df='duf -only local,fuse'

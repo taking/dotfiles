@@ -1,0 +1,230 @@
+# ================================
+# 🎨 Theme
+# ================================
+theme = "catppuccin_frappe"
+
+
+# ================================
+# 🧠 Editor Core
+# ================================
+[editor]
+
+# 상대 줄번호 (vim 스타일 이동에 유리)
+line-number = "relative"
+
+# true color (요즘 터미널에서는 거의 필수)
+true-color = true
+
+# LSP 에러 underline 스타일
+undercurl = true
+
+# mode 색상 표시 (normal/insert 등)
+color-modes = true
+
+# 현재 줄 강조
+cursorline = true
+
+# 🔥 핵심: 자동 저장만 사용 (다른 :w 제거)
+auto-save = true
+
+# 너무 낮으면 LSP/렌더링이 과도하게 반응
+# 너무 높으면 반응이 느려짐 → 200이 안정적
+idle-timeout = 200
+
+# gutter 구성 (좌측 정보 영역)
+# diagnostics + diff + line number
+gutters = ["diagnostics", "spacer", "diff", "line-numbers", "spacer"]
+
+
+# ================================
+# 🖱 Cursor Style
+# ================================
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+
+# ================================
+# 🔌 LSP
+# ================================
+[editor.lsp]
+
+# 메시지 너무 시끄러워서 끔 (필요하면 true)
+display-messages = false
+
+# 필요하면 켜도 좋음
+# display-inlay-hints = true
+
+
+# ================================
+# 📊 Statusline
+# ================================
+[editor.statusline]
+
+# 모드 표시
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+# 왼쪽: 파일 상태 중심
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+
+# 오른쪽: 진단 + git + 위치 정보
+right = ["diagnostics", "version-control", "position", "file-encoding"]
+
+
+# ================================
+# 📏 Indent / Whitespace
+# ================================
+[editor.indent-guides]
+render = true
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+tab = "→"
+
+
+# ================================
+# 📂 File Picker
+# ================================
+[editor.file-picker]
+
+# dotfile 표시
+hidden = false
+
+# git ignore 무시 여부
+git-global = false
+
+
+# ================================
+# 📜 Soft Wrap
+# ================================
+[editor.soft-wrap]
+enable = false
+
+
+# ================================
+# ⌨ Normal Mode Keybinds
+# ================================
+[keys.normal]
+
+# half page 이동 (vim muscle memory)
+pageup = "half_page_up"
+pagedown = "half_page_down"
+"C-u" = "half_page_up"
+"C-d" = "half_page_down"
+
+# 화면 회전
+"C-g" = "rotate_view"
+
+# 🔥 저장 제거 (auto-save 사용)
+# 선택 정리만 수행
+esc = ["collapse_selection", "keep_primary_selection"]
+
+# 시스템 클립보드 기반 yank
+y = "yank_joined_to_clipboard"
+
+# paste (저장 제거됨)
+p = "paste_clipboard_after"
+P = "replace_selections_with_clipboard"
+
+# line select + select mode 진입
+x = ["extend_line_below", "select_mode"]
+
+# word 이동 커스터마이징
+z = "move_next_word_start"
+
+# selection 방향 전환
+";" = "flip_selections"
+
+# 마지막 motion 반복
+"," = "repeat_last_motion"
+
+
+# ================================
+# 🔵 Select Mode
+# ================================
+[keys.select]
+
+pageup = "half_page_up"
+pagedown = "half_page_down"
+"C-u" = "half_page_up"
+"C-d" = "half_page_down"
+
+# selection 해제
+esc = ["collapse_selection", "normal_mode"]
+
+# clipboard 중심 작업
+y = "yank_joined_to_clipboard"
+p = "replace_selections_with_clipboard"
+P = "replace_selections_with_clipboard"
+
+# delete 시 clipboard에 저장
+d = ["yank_joined_to_clipboard", "delete_selection"]
+
+# change 시 커서 위치 안정화
+c = ["trim_selections", "change_selection"]
+
+z = "move_next_word_start"
+";" = "flip_selections"
+"," = "repeat_last_motion"
+
+
+# ================================
+# ✏ Insert Mode
+# ================================
+[keys.insert]
+
+pageup = "half_page_up"
+pagedown = "half_page_down"
+"C-u" = "half_page_up"
+"C-d" = "half_page_down"
+
+# insert → normal (저장 없음)
+esc = "normal_mode"
+
+
+# ================================
+# 🚀 Space Leader Key
+# ================================
+[keys.normal.space]
+
+# 줄 끝에 comma 추가
+"," = [
+    "save_selection",
+    "goto_line_end",
+    ":append-output echo ','",
+    "collapse_selection",
+    "delete_selection",
+    "jump_backward",
+]
+
+# 줄 끝에 semicolon 추가
+";" = [
+    "save_selection",
+    "goto_line_end",
+    ":append-output echo ';'",
+    "collapse_selection",
+    "delete_selection",
+    "jump_backward",
+]
+
+# 현재 디렉토리 기준 파일 탐색
+F = "file_picker_in_current_buffer_directory"
+
+# gitignore 무시 토글
+"." = ":toggle-option file-picker.git-ignore"
+
+# 포맷
+"=" = ":format"
+
+# indent 스타일 변경
+"+" = ":indent-style 4"
+
+# quit
+"q" = ":q"

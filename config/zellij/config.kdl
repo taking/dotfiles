@@ -1,0 +1,256 @@
+// ============================================================
+// Zellij config
+// 목적:
+// - Helix와 키 충돌 최소화
+// - tmux 대체용으로만 단순하게 사용
+// - pane은 보조, tab 중심
+// - 세션 안정성 확보
+// ============================================================
+
+
+// ============================================================
+// 기본 동작
+// ============================================================
+
+// 새 pane / tab 에서 기본 shell
+default_shell "zsh"
+
+// 시작 레이아웃
+// 아래에서 따로 layout 파일을 만들 예정이면 "editor" 추천
+// 아직 layout을 안 만들었으면 임시로 "default"나 "compact"도 가능
+default_layout "default"
+
+// 가장 중요:
+// 시작하자마자 locked 상태로 두면
+// Helix 안에서 Ctrl / Alt 충돌이 크게 줄어듦
+default_mode "locked"
+
+// ============================================================
+// UI / 입력
+// ============================================================
+
+theme "catppuccin"
+
+// pane 테두리 제거
+// Helix 화면을 더 넓고 깔끔하게 사용
+pane_frames false
+
+// 마우스 사용 허용
+mouse_mode true
+
+// macOS 클립보드 복사
+copy_command "pbcopy"
+
+// 마우스로 드래그 선택했다고 바로 복사하지 않음
+copy_on_select false
+
+// 로그 / 빌드 출력 확인용 scrollback 여유
+scroll_buffer_size 20000
+
+// 시작 팁 / 릴리즈 노트 숨김
+show_startup_tips false
+show_release_notes false
+
+
+// ============================================================
+// 세션 안정성
+// ============================================================
+
+// 터미널 창을 닫아도 세션을 종료하지 않고 detach
+on_force_close "detach"
+
+// pane 자동 재배치 최소화
+// 수동으로 탭/패널을 쓰는 현재 스타일에 더 잘 맞음
+auto_layout false
+
+// 세션 상태 저장
+session_serialization true
+
+// pane 내부 스크롤 위치까지는 저장하지 않음
+serialize_pane_viewport false
+
+// scrollback 을 Helix로 열기
+scrollback_editor "hx"
+
+
+// ============================================================
+// Keybinds
+// 철학:
+// - 평소엔 locked
+// - Ctrl g 로 잠깐 normal 진입
+// - 자주 쓰는 것만 남김
+// - move / resize / plugin 관련 복잡도는 제거
+// ============================================================
+
+keybinds clear-defaults=true {
+
+    // --------------------------------------------------------
+    // locked mode
+    // 평소 기본 상태
+    // --------------------------------------------------------
+    locked {
+        // Zellij 조작 시작
+        bind "Ctrl g" { SwitchToMode "normal"; }
+
+        // 아래는 필요할 때만 켜도 됨
+        // locked 상태에서도 pane/tab 이동을 원하면 주석 해제
+        // bind "Alt h" { MoveFocusOrTab "left"; }
+        // bind "Alt l" { MoveFocusOrTab "right"; }
+    }
+
+
+    // --------------------------------------------------------
+    // normal mode
+    // 잠깐 명령 대기 상태
+    // --------------------------------------------------------
+    normal {
+        // 다시 locked 로 복귀
+        bind "Ctrl g" { SwitchToMode "locked"; }
+        bind "Esc" { SwitchToMode "locked"; }
+        bind "Enter" { SwitchToMode "locked"; }
+
+        // ---- 가장 자주 쓸 기능들 ----
+
+        // 탭 이동
+        bind "h" { GoToPreviousTab; SwitchToMode "locked"; }
+        bind "l" { GoToNextTab; SwitchToMode "locked"; }
+
+        // 탭 바로 이동
+        bind "1" { GoToTab 1; SwitchToMode "locked"; }
+        bind "2" { GoToTab 2; SwitchToMode "locked"; }
+        bind "3" { GoToTab 3; SwitchToMode "locked"; }
+        bind "4" { GoToTab 4; SwitchToMode "locked"; }
+
+        // 새 탭 / 탭 닫기
+        bind "t" { NewTab; SwitchToMode "locked"; }
+        bind "w" { CloseTab; SwitchToMode "locked"; }
+
+        // pane 관련 최소 기능
+        bind "n" { NewPane; SwitchToMode "locked"; }          // 같은 방향 새 pane
+        bind "v" { NewPane "right"; SwitchToMode "locked"; }  // 오른쪽 분할
+        bind "x" { NewPane "down"; SwitchToMode "locked"; }   // 아래 분할
+        bind "q" { CloseFocus; SwitchToMode "locked"; }       // 현재 pane 닫기
+        bind "f" { ToggleFocusFullscreen; SwitchToMode "locked"; } // pane 최대화
+
+        // 모드 진입
+        bind "p" { SwitchToMode "pane"; }     // pane 이동
+        bind "s" { SwitchToMode "scroll"; }   // scrollback 보기
+        bind "o" { SwitchToMode "session"; }  // 세션 관리
+
+        // 현재 탭 내 pane 간 전환
+        bind "Tab" { SwitchFocus; SwitchToMode "locked"; }
+    }
+
+
+    // --------------------------------------------------------
+    // pane mode
+    // pane 이동만 담당
+    // --------------------------------------------------------
+    pane {
+        bind "h" { MoveFocus "left"; }
+        bind "j" { MoveFocus "down"; }
+        bind "k" { MoveFocus "up"; }
+        bind "l" { MoveFocus "right"; }
+
+        // pane 생성도 여기서 가능
+        bind "n" { NewPane; SwitchToMode "locked"; }
+        bind "v" { NewPane "right"; SwitchToMode "locked"; }
+        bind "x" { NewPane "down"; SwitchToMode "locked"; }
+
+        // 현재 pane 최대화 / 닫기
+        bind "f" { ToggleFocusFullscreen; SwitchToMode "locked"; }
+        bind "q" { CloseFocus; SwitchToMode "locked"; }
+
+        // pane 순환 전환
+        bind "p" { SwitchFocus; }
+
+        bind "Esc" { SwitchToMode "locked"; }
+        bind "Enter" { SwitchToMode "locked"; }
+        bind "Ctrl g" { SwitchToMode "locked"; }
+    }
+
+
+    // --------------------------------------------------------
+    // scroll mode
+    // 로그 보기 / 검색 / Helix로 열기
+    // --------------------------------------------------------
+    scroll {
+        bind "j" { ScrollDown; }
+        bind "k" { ScrollUp; }
+        bind "d" { HalfPageScrollDown; }
+        bind "u" { HalfPageScrollUp; }
+        bind "PageDown" { PageScrollDown; }
+        bind "PageUp" { PageScrollUp; }
+
+        // scrollback 을 Helix로 열기
+        bind "e" { EditScrollback; SwitchToMode "locked"; }
+
+        // 검색 시작
+        bind "/" { SwitchToMode "entersearch"; SearchInput 0; }
+
+        // 맨 아래로 돌아가며 종료
+        bind "Ctrl c" { ScrollToBottom; SwitchToMode "locked"; }
+        bind "Esc" { SwitchToMode "locked"; }
+        bind "Enter" { SwitchToMode "locked"; }
+        bind "Ctrl g" { SwitchToMode "locked"; }
+    }
+
+
+    // --------------------------------------------------------
+    // 검색어 입력 시작
+    // --------------------------------------------------------
+    entersearch {
+        bind "Enter" { SwitchToMode "search"; }
+        bind "Esc" { SwitchToMode "scroll"; }
+        bind "Ctrl c" { SwitchToMode "locked"; }
+    }
+
+
+    // --------------------------------------------------------
+    // search mode
+    // scrollback 검색 결과 탐색
+    // --------------------------------------------------------
+    search {
+        bind "n" { Search "down"; }
+        bind "p" { Search "up"; }
+        bind "c" { SearchToggleOption "CaseSensitivity"; }
+        bind "o" { SearchToggleOption "WholeWord"; }
+        bind "w" { SearchToggleOption "Wrap"; }
+
+        bind "Esc" { SwitchToMode "locked"; }
+        bind "Enter" { SwitchToMode "locked"; }
+        bind "Ctrl g" { SwitchToMode "locked"; }
+    }
+
+
+    // --------------------------------------------------------
+    // session mode
+    // 세션 관리 최소 기능만 남김
+    // --------------------------------------------------------
+    session {
+        // session manager 열기
+        bind "w" {
+            LaunchOrFocusPlugin "session-manager" {
+                floating true
+                move_to_focused_tab true
+            }
+            SwitchToMode "locked"
+        }
+
+        // detach
+        bind "d" { Detach; SwitchToMode "locked"; }
+
+        bind "Esc" { SwitchToMode "locked"; }
+        bind "Enter" { SwitchToMode "locked"; }
+        bind "Ctrl g" { SwitchToMode "locked"; }
+    }
+
+
+    // --------------------------------------------------------
+    // 공통 단축키
+    // locked 상태를 제외한 대부분 모드에서 종료 가능
+    // --------------------------------------------------------
+    shared_except "locked" {
+        bind "Ctrl q" { Quit; }
+    }
+}
